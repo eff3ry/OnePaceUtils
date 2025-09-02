@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "generated_at": "2025-09-03T00:08:55.601699",
+    "generated_at": "2025-09-03T00:12:13.032388",
     "source_file": "generated\\torrentsRawAll.json",
     "processed_with": "torrentProcessor.py",
-    "total_torrents_processed": 255,
+    "total_torrents_processed": 234,
     "processing_stats": {
       "total_input": 404,
-      "removed_low_seeders": 0,
+      "removed_low_seeders": 128,
       "removed_unwanted": 10,
-      "removed_duplicates": 53,
-      "batch_single_conflicts": 5,
-      "final_count": 255
+      "removed_duplicates": 26,
+      "batch_single_conflicts": 4,
+      "final_count": 234
     },
-    "min_seeders_threshold": 0,
+    "min_seeders_threshold": 5,
     "version": "1.0"
   },
   "torrents": [
@@ -307,49 +307,6 @@
         {
           "path": "[One Pace][924] Wano 12 [1080p][5ACE812A].mkv",
           "size": "565.4 MiB"
-        }
-      ]
-    },
-    {
-      "title": "One Pace Wano 1-7",
-      "magnet_link": "magnet:?xt=urn:btih:9adf86d1496445eadc08e2ba67a1be6c233141e0&dn=One%20Pace%20Wano%201-7&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "3.9 GiB",
-        "bytes": 4187593113
-      },
-      "upload_date": "2020-02-27 00:20",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1224093",
-      "file_list": [
-        {
-          "path": "[One Pace][909-910] Wano 01 [1080p][B155795F].mkv",
-          "size": "512.7 MiB"
-        },
-        {
-          "path": "[One Pace][909-911] Wano 02 [1080p][C95C9344].mkv",
-          "size": "1.4 GiB"
-        },
-        {
-          "path": "[One Pace][911-912] Wano 03 [1080p][192FD660].mkv",
-          "size": "944.3 MiB"
-        },
-        {
-          "path": "[One Pace][913] Wano 04 [1080p].mp4",
-          "size": "259.2 MiB"
-        },
-        {
-          "path": "[One Pace][914-915] Wano 05].mp4",
-          "size": "285.4 MiB"
-        },
-        {
-          "path": "[One Pace][915-916] Wano 06 [1080p].mp4",
-          "size": "280.3 MiB"
-        },
-        {
-          "path": "[One Pace][916-917] Wano 07 [1080p][B155795F].mp4",
-          "size": "292.5 MiB"
         }
       ]
     },
@@ -686,104 +643,6 @@
       ]
     },
     {
-      "title": "[One Pace][236-247] Skypiea 1-5 [480p]",
-      "magnet_link": "magnet:?xt=urn:btih:b7c90f012388eaea00f648840901bab1ac44119c&dn=%5BOne%20Pace%5D%5B236-247%5D%20Skypiea%201-5%20%5B480p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "456.8 MiB",
-        "bytes": 478989516
-      },
-      "upload_date": "2017-02-03 20:01",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/895962",
-      "file_list": [
-        {
-          "path": "[One Pace][237-238] Skypeia 01 [480p][74DABFB2].mkv",
-          "size": "80.4 MiB"
-        },
-        {
-          "path": "[One Pace][239-240] Skypiea 02 [480p][1A833587].mkv",
-          "size": "69.7 MiB"
-        },
-        {
-          "path": "[One Pace][241-242] Skypiea 03 [480p][DF100DE6].mkv",
-          "size": "92.6 MiB"
-        },
-        {
-          "path": "[One Pace][243-244] Skypiea 04 [480p][9FA5B2C2].mkv",
-          "size": "116.0 MiB"
-        },
-        {
-          "path": "[One Pace][245-246] Skypiea 05 [480p][E1F39FF7].mkv",
-          "size": "97.9 MiB"
-        }
-      ]
-    },
-    {
-      "title": "[One Pace][700-749] Dressrosa 01-25 [720p]",
-      "magnet_link": "magnet:?xt=urn:btih:742f4084089fde2910efa7a58294f5b697995282&dn=%5BOne%20Pace%5D%5B700-749%5D%20Dressrosa%2001-25%20%5B720p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "7.3 GiB",
-        "bytes": 7838315315
-      },
-      "upload_date": "2016-01-28 10:27",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/779441"
-    },
-    {
-      "title": "[One Pace][008-021] Buggy the Clown [480p]",
-      "magnet_link": "magnet:?xt=urn:btih:a4b92c5c44ddfd98b0da2dd88946d9ab84d9ab25&dn=%5BOne%20Pace%5D%5B008-021%5D%20Buggy%20the%20Clown%20%5B480p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "524.8 MiB",
-        "bytes": 550292684
-      },
-      "upload_date": "2016-01-26 23:44",
-      "seeders": 0,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/778953",
-      "file_list": [
-        {
-          "path": "[One Pace] Buggy the Clown 01 [640x480 x265 AAC][605DF591].mkv",
-          "size": "141.5 MiB"
-        },
-        {
-          "path": "[One Pace] Buggy the Clown 02 [640x480 x265 AAC][3D7957D8].mkv",
-          "size": "170.4 MiB"
-        },
-        {
-          "path": "[One Pace] Buggy the Clown 03 [640x480 x265 AAC][800263CF].mkv",
-          "size": "212.8 MiB"
-        }
-      ]
-    },
-    {
-      "title": "[One Pace][003-007] Captain Morgan [720p]",
-      "magnet_link": "magnet:?xt=urn:btih:f0be9c55c8fe1e7990cee1a7db60f2b23e970755&dn=%5BOne%20Pace%5D%5B003-007%5D%20Captain%20Morgan%20%5B720p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "182.6 MiB",
-        "bytes": 191469977
-      },
-      "upload_date": "2015-01-03 07:12",
-      "seeders": 0,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/641598",
-      "file_list": [
-        {
-          "path": "[One Pace] Paced One Piece - Captain Morgan Episode 01 [640x480 x265 AAC][2C30BB7A].mkv",
-          "size": "115.1 MiB"
-        },
-        {
-          "path": "[One Pace] Paced One Piece - Captain Morgan Episode 02 [640x480 x265 AAC][6E92672D].mkv",
-          "size": "67.5 MiB"
-        }
-      ]
-    },
-    {
       "title": "[One Pace][442-489] Thriller Bark [720p]",
       "magnet_link": "magnet:?xt=urn:btih:2c83d7ba67a243de5995f687073787341c69958c&dn=%5BOne%20Pace%5D%5B442-489%5D%20Thriller%20Bark%20%5B720p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
       "file_size": {
@@ -834,19 +693,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1958602"
-    },
-    {
-      "title": "[One Pace][42,22] Gaimon 01 [1080p][9269F40F].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:0b9784f51cdf848c3887d8e540d1204aa7830d96&dn=%5BOne%20Pace%5D%5B42%2C22%5D%20Gaimon%2001%20%5B1080p%5D%5B9269F40F%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "538.1 MiB",
-        "bytes": 564238745
-      },
-      "upload_date": "2025-07-27 21:38",
-      "seeders": 30,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1999001"
     },
     {
       "title": "[One Pace][303] Long Ring Long Land 00 [1080p][E85B9E9D].mkv",
@@ -951,19 +797,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1252567"
-    },
-    {
-      "title": "[One Pace][85-87] Arlong Park 07 [480p][AE7B08F2].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:fe56ef10556aea4fe63ccc54344cfcce771cde03&dn=%5BOne%20Pace%5D%5B85-87%5D%20Arlong%20Park%2007%20%5B480p%5D%5BAE7B08F2%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "155.7 MiB",
-        "bytes": 163263283
-      },
-      "upload_date": "2020-05-27 01:56",
-      "seeders": 4,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1250110"
     },
     {
       "title": "[One Pace][82-84] Arlong Park 06 [480p][7A559716].mkv",
@@ -1419,6 +1252,19 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1688916"
+    },
+    {
+      "title": "[One Pace][42,22] Gaimon 01 [1080p][9269F40F].mkv",
+      "magnet_link": "magnet:?xt=urn:btih:0b9784f51cdf848c3887d8e540d1204aa7830d96&dn=%5BOne%20Pace%5D%5B42%2C22%5D%20Gaimon%2001%20%5B1080p%5D%5B9269F40F%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "538.1 MiB",
+        "bytes": 564238745
+      },
+      "upload_date": "2025-07-27 21:38",
+      "seeders": 30,
+      "leechers": 0,
+      "is_batch": false,
+      "torrent_page_url": "https://nyaa.si/view/1999001"
     },
     {
       "title": "[One Pace][127-129] Little Garden 05 [1080p][51105EBB].mkv",
@@ -2069,97 +1915,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1233980"
-    },
-    {
-      "title": "[One Pace][921-922] Wano 10 [1080p][919A1140].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:0bf8c06bd9aa5ffc2205a6a5b8c9e3f0aa76b052&dn=%5BOne%20Pace%5D%5B921-922%5D%20Wano%2010%20%5B1080p%5D%5B919A1140%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "917.7 MiB",
-        "bytes": 962278195
-      },
-      "upload_date": "2020-03-31 23:48",
-      "seeders": 0,
-      "leechers": 8,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1233979"
-    },
-    {
-      "title": "[One Pace][919-920] Wano 09 [1080p][A08EC3B9].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:3fb002f4887ed9f915a88f8492eb834e1787de4c&dn=%5BOne%20Pace%5D%5B919-920%5D%20Wano%2009%20%5B1080p%5D%5BA08EC3B9%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "626.7 MiB",
-        "bytes": 657142579
-      },
-      "upload_date": "2020-03-16 22:13",
-      "seeders": 0,
-      "leechers": 8,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1229619"
-    },
-    {
-      "title": "[One Pace][918-919] Wano 08 [1080p][D3899913].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:889704ccc4a7ec24e630eec54e991f7b1f70260d&dn=%5BOne%20Pace%5D%5B918-919%5D%20Wano%2008%20%5B1080p%5D%5BD3899913%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "974.4 MiB",
-        "bytes": 1021732454
-      },
-      "upload_date": "2020-03-14 01:51",
-      "seeders": 0,
-      "leechers": 8,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1228760"
-    },
-    {
-      "title": "[One Pace][916-917] Wano 07 [1080p][407B42D5].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:da0a221e6e779f6f94b4fbecbebeff4fec0e9995&dn=%5BOne%20Pace%5D%5B916-917%5D%20Wano%2007%20%5B1080p%5D%5B407B42D5%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "721.5 MiB",
-        "bytes": 756547584
-      },
-      "upload_date": "2020-02-27 02:17",
-      "seeders": 0,
-      "leechers": 8,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1224117"
-    },
-    {
-      "title": "[One Pace][915-916] Wano 06 [1080p][4C39B34C].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:4e3d8ed54a0a89f00096b8d3a29b39d150a3e47b&dn=%5BOne%20Pace%5D%5B915-916%5D%20Wano%2006%20%5B1080p%5D%5B4C39B34C%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "682.9 MiB",
-        "bytes": 716072550
-      },
-      "upload_date": "2020-02-27 02:17",
-      "seeders": 0,
-      "leechers": 6,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1224116"
-    },
-    {
-      "title": "[One Pace][914-915] Wano 05 [1080p][64E446D3].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:9f5b1b399b28b9e861960356010210a5231756e9&dn=%5BOne%20Pace%5D%5B914-915%5D%20Wano%2005%20%5B1080p%5D%5B64E446D3%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "738.9 MiB",
-        "bytes": 774792806
-      },
-      "upload_date": "2020-02-27 02:17",
-      "seeders": 0,
-      "leechers": 9,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1224115"
-    },
-    {
-      "title": "[One Pace][913] Wano 04 [1080p][1865E7DF].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:1164c607c26b1f234d266d440b02bf009167b22f&dn=%5BOne%20Pace%5D%5B913%5D%20Wano%2004%20%5B1080p%5D%5B1865E7DF%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "668.4 MiB",
-        "bytes": 700868198
-      },
-      "upload_date": "2020-02-27 02:17",
-      "seeders": 0,
-      "leechers": 8,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1224114"
     },
     {
       "title": "[One Pace][302-303] Skypiea 25 [1080p][C951349C].mkv",
@@ -3694,110 +3449,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1113091"
-    },
-    {
-      "title": "[One Pace][Cover 236-262] Wapol's Omnivorous Hurrah [720p][05BE81E6].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:2cbbeef2c6c5597ef09c8659ee8d541e6d2be371&dn=%5BOne%20Pace%5D%5BCover%20236-262%5D%20Wapol%27s%20Omnivorous%20Hurrah%20%5B720p%5D%5B05BE81E6%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "21.6 MiB",
-        "bytes": 22649241
-      },
-      "upload_date": "2017-02-26 14:54",
-      "seeders": 3,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/903285"
-    },
-    {
-      "title": "[One Pace][318-321] Davy Back Fight 06 [720p][EB19DA9C].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:ffcb0679fb3eb04afef3d25c8628549ecabffecd&dn=%5BOne%20Pace%5D%5B318-321%5D%20Davy%20Back%20Fight%2006%20%5B720p%5D%5BEB19DA9C%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "268.7 MiB",
-        "bytes": 281752371
-      },
-      "upload_date": "2016-06-05 04:02",
-      "seeders": 0,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/818066"
-    },
-    {
-      "title": "[One Pace][317-318] Davy Back Fight 05 [720p][4DDAE95E].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:9d885c2ea01ea1d7f2f540d083e5faf266a131a0&dn=%5BOne%20Pace%5D%5B317-318%5D%20Davy%20Back%20Fight%2005%20%5B720p%5D%5B4DDAE95E%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "157.5 MiB",
-        "bytes": 165150720
-      },
-      "upload_date": "2016-05-29 00:21",
-      "seeders": 0,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/815917"
-    },
-    {
-      "title": "[One Pace][313-316] Davy Back Fight 04 [720p][E8D7058F].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:5d9d8fad5d02c3b03179b65f4908166b974299d1&dn=%5BOne%20Pace%5D%5B313-316%5D%20Davy%20Back%20Fight%2004%20%5B720p%5D%5BE8D7058F%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "280.5 MiB",
-        "bytes": 294125568
-      },
-      "upload_date": "2016-05-15 07:51",
-      "seeders": 0,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/812006"
-    },
-    {
-      "title": "[One Pace][310-312] Davy Back Fight 03 [720p][3EE8D2D0].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:2f3d7d67ee0bba54beab3c95afc525b10bf193d7&dn=%5BOne%20Pace%5D%5B310-312%5D%20Davy%20Back%20Fight%2003%20%5B720p%5D%5B3EE8D2D0%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "269.3 MiB",
-        "bytes": 282381516
-      },
-      "upload_date": "2016-03-30 03:26",
-      "seeders": 0,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/798456"
-    },
-    {
-      "title": "[One Pace][307-309] Davy Back Fight 02 [720p][2D25EDD9].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:eb94d171b05d0f395397500262c962dc6c1a8870&dn=%5BOne%20Pace%5D%5B307-309%5D%20Davy%20Back%20Fight%2002%20%5B720p%5D%5B2D25EDD9%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "301.3 MiB",
-        "bytes": 315935948
-      },
-      "upload_date": "2016-03-24 14:43",
-      "seeders": 0,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/796664"
-    },
-    {
-      "title": "[One Pace][304-306] Davy Back Fight 01 [720p][6D49D66B].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:42b2b2ea201363989a910146c5b61ba628053686&dn=%5BOne%20Pace%5D%5B304-306%5D%20Davy%20Back%20Fight%2001%20%5B720p%5D%5B6D49D66B%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "346.3 MiB",
-        "bytes": 363121868
-      },
-      "upload_date": "2016-03-03 15:12",
-      "seeders": 0,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/790449"
-    },
-    {
-      "title": "[One Pace][002] Alvida [480p][0CB32BF6].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:f5d5229f2ba960b829df92d7723f9143d0dd7dab&dn=%5BOne%20Pace%5D%5B002%5D%20Alvida%20%5B480p%5D%5B0CB32BF6%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "51.8 MiB",
-        "bytes": 54316236
-      },
-      "upload_date": "2014-11-28 05:00",
-      "seeders": 0,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/628328"
     }
   ]
 }
