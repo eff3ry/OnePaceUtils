@@ -6,7 +6,7 @@ import os
 import re
 import sys
 
-rootFolder = Path("C:\\Users\\jeffe\\Documents\\GitHub\\one-pace-jellyfin-metadata\\One Pace")
+rootFolder = Path("./OnePace_Structure")
 subtitleTitleUrl = "https://github.com/one-pace/one-pace-public-subtitles/raw/refs/heads/main/main/title.properties"
 
 def clear():

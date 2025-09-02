@@ -139,96 +139,97 @@ class TorrentProcessor:
     def handle_batch_vs_single(self, torrents: List[Dict]) -> List[Dict]:
         """
         Handle conflicts between batch releases and individual episodes
-        Priority: Better quality > Newer date > Keep batch over individual episodes
+        Only removes a batch if ALL episodes in that batch are covered by higher quality individual episodes
+        Otherwise, keeps both batch and individual episodes for episode-level selection in folder structure generator
         """
         result = []
         batch_torrents = []
         single_torrents = []
-        
+
         # Separate batch and single torrents
         for torrent in torrents:
-            if torrent['is_batch']:
+            if torrent.get('is_batch', False):
                 batch_torrents.append(torrent)
             else:
                 single_torrents.append(torrent)
-        
+
         # Group single episodes by arc for comparison with batches
         single_by_arc = {}
         for single in single_torrents:
-            single_info = self.parse_episode_info(single['title'])
-            if single_info:
-                arc_name = single_info['arc_name']
-                if arc_name not in single_by_arc:
-                    single_by_arc[arc_name] = []
-                single_by_arc[arc_name].append(single)
-        
-        # Process each batch and decide whether to keep it or replace with individual episodes
-        batches_to_keep = []
-        singles_to_add = []
-        
-        for batch in batch_torrents:
-            batch_info = self.parse_episode_info(batch['title'])
-            if not batch_info:
-                batches_to_keep.append(batch)
+            try:
+                single_info = self.parse_episode_info(single['title'])
+                if single_info:
+                    arc_name = single_info['arc_name']
+                    if arc_name not in single_by_arc:
+                        single_by_arc[arc_name] = []
+                    single_by_arc[arc_name].append(single)
+            except Exception as e:
+                print(f"Error parsing single episode: {single.get('title', 'unknown')} - {e}")
                 continue
-            
-            arc_name = batch_info['arc_name']
-            batch_quality = self.get_quality_score(batch_info['quality'])
-            batch_date = self.parse_upload_date(batch['upload_date'])
-            
-            # Check if there are individual episodes for this arc
-            if arc_name in single_by_arc:
-                conflicting_singles = single_by_arc[arc_name]
-                
-                # Find the best quality among individual episodes for this arc
-                best_single_quality = 0
-                newest_single_date = datetime(1970, 1, 1)
-                
-                for single in conflicting_singles:
-                    single_info = self.parse_episode_info(single['title'])
-                    if single_info:
-                        single_quality = self.get_quality_score(single_info['quality'])
-                        single_date = self.parse_upload_date(single['upload_date'])
-                        
-                        best_single_quality = max(best_single_quality, single_quality)
-                        newest_single_date = max(newest_single_date, single_date)
-                
-                # Decision logic:
-                # 1. If individual episodes have better quality, use them instead of batch
-                # 2. If same quality, prefer newer upload date
-                # 3. If same quality and date, prefer batch (more convenient)
-                
-                if best_single_quality > batch_quality:
-                    # Individual episodes have better quality - use them instead
-                    singles_to_add.extend(conflicting_singles)
-                    self.stats['batch_single_conflicts'] += 1
-                    print(f"  Replacing {arc_name} batch ({batch_info['quality']}) with individual episodes ({self.get_quality_name(best_single_quality)})")
-                elif best_single_quality == batch_quality and newest_single_date > batch_date:
-                    # Same quality but individual episodes are newer
-                    singles_to_add.extend(conflicting_singles)
-                    self.stats['batch_single_conflicts'] += 1
-                    print(f"  Replacing {arc_name} batch with newer individual episodes (same quality: {batch_info['quality']})")
-                else:
-                    # Keep batch (same/better quality and date, or batch is newer)
-                    batches_to_keep.append(batch)
-                    print(f"  Keeping {arc_name} batch ({batch_info['quality']}) over individual episodes")
-                
-                # Remove this arc from singles dict so we don't process it again
-                del single_by_arc[arc_name]
-            else:
-                # No conflicting individual episodes, keep the batch
-                batches_to_keep.append(batch)
-        
-        # Add remaining individual episodes that don't conflict with any batch
+
+        # Always add all individual episodes
         for arc_name, episodes in single_by_arc.items():
-            singles_to_add.extend(episodes)
-        
-        # Combine results
-        result.extend(batches_to_keep)
-        result.extend(singles_to_add)
-        
+            result.extend(episodes)
+
+        # Process each batch and check if it should be kept
+        for batch in batch_torrents:
+            try:
+                batch_info = self.parse_episode_info(batch['title'])
+                if not batch_info:
+                    result.append(batch)
+                    continue
+
+                arc_name = batch_info['arc_name']
+                batch_quality = self.get_quality_score(batch_info['quality'])
+
+                # Get the episodes covered by this batch
+                batch_episodes = self.get_batch_episode_numbers(batch)
+                if not batch_episodes:
+                    # Can't determine episodes, keep the batch
+                    result.append(batch)
+                    continue
+
+                # Check if individual episodes completely cover this batch with higher quality
+                if arc_name in single_by_arc:
+                    conflicting_singles = single_by_arc[arc_name]
+                    
+                    # Track which episodes are covered by higher quality individual episodes
+                    covered_episodes = set()
+                    
+                    for single in conflicting_singles:
+                        try:
+                            single_info = self.parse_episode_info(single['title'])
+                            if single_info:
+                                single_quality = self.get_quality_score(single_info['quality'])
+                                
+                                # Only count if individual has higher or equal quality
+                                if single_quality >= batch_quality:
+                                    single_episodes = self.get_individual_episode_numbers(single)
+                                    covered_episodes.update(single_episodes)
+                        except Exception as e:
+                            print(f"Error processing single episode: {single.get('title', 'unknown')} - {e}")
+                            continue
+
+                    # Only remove batch if ALL its episodes are covered by higher/equal quality individuals
+                    if batch_episodes.issubset(covered_episodes):
+                        self.stats['batch_single_conflicts'] += 1
+                        print(f"  Removing {arc_name} batch ({batch_info['quality']}) - ALL {len(batch_episodes)} episodes covered by higher quality individuals")
+                    else:
+                        uncovered = batch_episodes - covered_episodes
+                        result.append(batch)
+                        print(f"  Keeping {arc_name} batch ({batch_info['quality']}) - episodes {sorted(uncovered)} not covered by higher quality individuals")
+                else:
+                    # No conflicting individual episodes, keep the batch
+                    result.append(batch)
+
+            except Exception as e:
+                print(f"Error processing batch torrent: {batch.get('title', 'unknown')} - {e}")
+                # On error, keep the batch to be safe
+                result.append(batch)
+                continue
+
         return result
-    
+
     def get_quality_name(self, quality_score: int) -> str:
         """
         Convert quality score back to quality name for logging
@@ -397,6 +398,51 @@ class TorrentProcessor:
         print(f"Final torrent count: {self.stats['final_count']}")
         print(f"Reduction: {self.stats['total_input'] - self.stats['final_count']} torrents removed")
         print(f"Output saved to: {self.output_file}")
+
+    def get_batch_episode_numbers(self, batch_torrent: Dict) -> set:
+        """
+        Extract episode numbers from a batch torrent
+        Returns a set of episode numbers covered by this batch
+        """
+        episode_numbers = set()
+        
+        # Extract episode numbers from file_list if available
+        if 'file_list' in batch_torrent and batch_torrent['file_list']:
+            for file_path in batch_torrent['file_list']:
+                # Ensure file_path is a string
+                if not isinstance(file_path, str):
+                    continue
+                    
+                # Extract episode numbers from individual files in the batch
+                # Files typically look like: "[One Pace][69-71] Arlong Park 01 [1080p][AD09145D].mkv"
+                # The episode number is the number right before the quality bracket
+                match = re.search(r'\s(\d+)\s+\[', file_path)
+                if match:
+                    episode_numbers.add(int(match.group(1)))
+                else:
+                    # Fallback: try other patterns
+                    # Sometimes files might look different, try to find episode numbers
+                    match = re.search(r'(?:Episode?\s*|Ep\.?\s*|E)(\d+)', file_path, re.IGNORECASE)
+                    if match:
+                        episode_numbers.add(int(match.group(1)))
+        
+        return episode_numbers
+
+    def get_individual_episode_numbers(self, individual_torrent: Dict) -> set:
+        """
+        Extract episode numbers from an individual episode torrent
+        Returns a set containing the episode number(s) for this individual torrent
+        """
+        # Parse the individual torrent title to get episode info
+        torrent_info = self.parse_episode_info(individual_torrent['title'])
+        if not torrent_info:
+            return set()
+        
+        # For individual episodes, use the episode_number from parsed info
+        if torrent_info.get('episode_number'):
+            return {torrent_info['episode_number']}
+        
+        return set()
 
 def main():
     """

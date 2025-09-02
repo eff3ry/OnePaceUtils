@@ -66,11 +66,34 @@ class NyaaScraper:
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            # Find file list - nyaa.si uses a <ul> with data-show="yes"
+            # Find file list - nyaa.si uses different ul structures depending on file count
             file_list = []
             
-            # Look for the file list ul element
+            # Look for the file list ul element in multiple ways:
+            # 1. Expanded state: <ul data-show="yes">
+            # 2. Collapsed state: <ul style="display: none;">
+            # 3. Expanded after click: <ul style="display: block;">
+            
+            file_ul = None
+            
+            # First try to find the expanded file list
             file_ul = soup.find('ul', {'data-show': 'yes'})
+            
+            # If not found, look for collapsed file list (style="display: none;")
+            if not file_ul:
+                file_ul = soup.find('ul', style=lambda value: value and 'display: none' in value)
+            
+            # Also check for expanded file list (style="display: block;")
+            if not file_ul:
+                file_ul = soup.find('ul', style=lambda value: value and 'display: block' in value)
+            
+            # Last resort: look for any ul that contains file items with file-size spans
+            if not file_ul:
+                all_uls = soup.find_all('ul')
+                for ul in all_uls:
+                    if ul.find('span', class_='file-size'):
+                        file_ul = ul
+                        break
             
             if file_ul:
                 # Find all li elements containing files
