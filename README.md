@@ -7,6 +7,8 @@ A collection of Python utilities for managing OnePace anime episodes, including 
 - [Overview](#overview)
 - [Scripts](#scripts)
   - [torrentScraper.py](#torrentscraper)
+  - [torrentProcessor.py](#torrentprocessor)
+  - [folderStructureGenerator.py](#folderstructuregenerator)
   - [MetaScraper_NewSite.py](#metascrapernewsite)
   - [MetaScraper_OldSite.py](#metascraperoldsite)
   - [subScraper.py](#subscraperpy)
@@ -47,6 +49,107 @@ scraper.scrape_all_pages()
 ```
 
 **Output**: Creates `generated/torrents.json` with comprehensive torrent data
+
+---
+
+### torrentProcessor.py
+
+**Purpose**: Processes raw torrent data to remove duplicates, handle batch conflicts, and filter low-quality torrents
+
+**Features**:
+- Removes torrents with low seeder counts (configurable threshold)
+- Eliminates duplicate episodes, keeping the newest/highest quality version
+- Handles batch vs single episode conflicts intelligently
+- Keeps both batch releases and newer individual episodes when appropriate
+- Quality-based prioritization (1080p > 720p > 480p)
+- Preserves extended versions as separate episodes
+
+**Key Functions**:
+- `parse_episode_info()` - Extracts arc, episode number, and quality from titles
+- `remove_duplicates()` - Removes duplicate episodes based on upload date and quality
+- `handle_batch_vs_single()` - Resolves conflicts between batch and individual releases
+- `filter_low_seeders()` - Removes torrents with insufficient seeders
+
+**Processing Logic**:
+1. **Seeder Filtering**: Removes torrents with < 5 seeders (configurable)
+2. **Duplicate Removal**: Keeps newest version of each episode
+3. **Batch Conflict Resolution**: Keeps batch + newer individual episodes
+4. **Quality Prioritization**: Prefers higher quality when dates are equal
+
+**Usage**:
+```bash
+# Use default settings (min 5 seeders)
+python torrentProcessor.py
+
+# Custom seeder threshold
+python torrentProcessor.py 10
+
+# Keep all torrents regardless of seeders
+python torrentProcessor.py 0
+```
+
+**Input**: `generated/torrentsRaw.json` (from torrentScraper.py)
+**Output**: `generated/torrents.json` (processed and deduplicated)
+
+---
+
+### folderStructureGenerator.py
+
+**Purpose**: Generates empty folder structure with NFO files based on processed torrent data
+
+**Features**:
+- Creates organized folder structure using OnePace torrent naming convention
+- For batch torrents: uses the torrent name as the folder name
+- For single episodes: creates standardized folders like `[One Pace][chapters] Arc [quality]`
+- Converts video filenames to corresponding NFO files
+- Generates complete NFO file content with metadata placeholders
+- Creates season.nfo files for each arc
+- Handles both batch and single episode torrents
+- Sanitizes filenames for safe filesystem usage
+
+**Key Functions**:
+- `parse_arc_info()` - Extracts arc information from torrent titles
+- `convert_video_to_nfo()` - Converts video extensions to .nfo
+- `create_nfo_content()` - Generates NFO file content with metadata
+- `create_season_nfo_content()` - Creates season-level NFO files
+- `sanitize_filename()` - Ensures safe filesystem filenames
+
+**Generated Structure**:
+```
+OnePace_Structure/
+├── [One Pace][903-908] Reverie [1080p]/
+│   ├── season.nfo
+│   └── [One Pace][903-908] Reverie [1080p].nfo
+├── [One Pace][1080-1081] Egghead [1080p]/
+│   ├── season.nfo
+│   ├── [One Pace][1080-1081] Egghead 14 [1080p][3C0010BE].nfo
+│   ├── [One Pace][1089-1090] Egghead 19 Extended [1080p][93B80191].nfo
+│   └── ...
+├── [One Pace][23-41] Syrup Village [480p]/
+│   ├── season.nfo
+│   └── ...
+└── ...
+```
+
+**NFO Content**: Each NFO file includes:
+- Episode title and number
+- Show title (One Pace)
+- Plot and outline descriptions
+- Genre and studio information
+- Placeholder tags for runtime, thumb, fanart
+- Fileinfo structure for media details
+
+**Usage**:
+```bash
+# Use default output directory (OnePace_Structure)
+python folderStructureGenerator.py
+
+# Custom output directory
+python folderStructureGenerator.py "My_OnePace_Library"
+```
+
+**Input**: `generated/torrentsClean.json` (from torrentProcessor.py)
+**Output**: Complete folder structure with NFO files ready for media servers
 
 ---
 
@@ -178,25 +281,41 @@ python nfoUpdater.py
 
 ## Generated Files
 
+### `generated/torrentsRaw.json`
+Raw torrent data from nyaa.si scraper before processing
+
 ### `generated/torrents.json`
-Contains comprehensive torrent data with structure:
+Processed and cleaned torrent data with structure:
 ```json
 {
-  "scraper_info": {
-    "scraper_version": "1.0",
-    "last_updated": "2024-01-01T12:00:00Z",
-    "total_torrents": 150
+  "metadata": {
+    "generated_at": "2024-01-01T12:00:00Z",
+    "source_file": "generated/torrentsRaw.json",
+    "processed_with": "torrentProcessor.py",
+    "total_torrents_processed": 120,
+    "processing_stats": {
+      "total_input": 171,
+      "removed_low_seeders": 25,
+      "removed_duplicates": 18,
+      "batch_single_conflicts": 8,
+      "final_count": 120
+    },
+    "min_seeders_threshold": 5,
+    "version": "1.0"
   },
   "torrents": [
     {
       "title": "[One Pace][1080-1081] Egghead 14 [1080p][3C0010BE].mkv",
       "magnet_link": "magnet:?xt=urn:btih:...",
-      "file_size": "1.2 GiB",
-      "upload_date": "2024-01-01",
+      "file_size": {
+        "raw": "1.2 GiB",
+        "bytes": 1288490189
+      },
+      "upload_date": "2024-01-01 12:00",
       "seeders": 10,
       "leechers": 2,
       "is_batch": false,
-      "files": []
+      "torrent_page_url": "https://nyaa.si/view/..."
     }
   ]
 }
@@ -237,22 +356,32 @@ pip install requests beautifulsoup4 selenium lxml
 python torrentScraper.py
 ```
 
-2. **Collect Current Site Metadata**:
+2. **Process and Clean Torrent Data**:
+```bash
+python torrentProcessor.py
+```
+
+3. **Generate Folder Structure with NFO Files**:
+```bash
+python folderStructureGenerator.py
+```
+
+4. **Collect Current Site Metadata**:
 ```bash
 python MetaScraper_NewSite.py
 ```
 
-3. **Collect Legacy Site Metadata**:
+5. **Collect Legacy Site Metadata**:
 ```bash
 python MetaScraper_OldSite.py
 ```
 
-4. **Update NFO Files with Scraped Metadata**:
+6. **Update NFO Files with Scraped Metadata**:
 ```bash
 python nfoUpdater.py
 ```
 
-5. **Manage Subtitle Information from GitHub**:
+7. **Manage Subtitle Information from GitHub**:
 ```bash
 python subScraper.py
 ```
@@ -261,8 +390,9 @@ python subScraper.py
 
 - **Run each script individually** - Scripts are not designed to import each other
 - **No dependencies between scripts** - Each can be run in any order
+- **Recommended workflow** - Run `torrentScraper.py` first, then `torrentProcessor.py` to clean the data, then `folderStructureGenerator.py` to create file structure
 - **Interactive scripts** - `nfoUpdater.py` and `subScraper.py` require user input
-- **Automated scripts** - `torrentScraper.py` and both MetaScraper scripts run fully automated
+- **Automated scripts** - `torrentScraper.py`, `torrentProcessor.py`, `folderStructureGenerator.py`, and both MetaScraper scripts run fully automated
 
 ### Individual Function Usage
 
@@ -293,15 +423,22 @@ modify_single_nfo(nfo_path, "title", "New Episode Title")
 ```
 OnePaceUtils/
 ├── torrentScraper.py          # Torrent data collection
+├── torrentProcessor.py        # Torrent data processing and cleanup
+├── folderStructureGenerator.py # Generate folder structure with NFO files
 ├── MetaScraper_NewSite.py     # Current site metadata
 ├── MetaScraper_OldSite.py     # Legacy site metadata
 ├── subScraper.py              # Subtitle and NFO management
 ├── nfoUpdater.py              # NFO file updates
 ├── generated/                 # Output directory
-│   ├── torrents.json         # Torrent data
+│   ├── torrentsRaw.json      # Raw torrent data
+│   ├── torrents.json         # Processed torrent data
 │   ├── siteMetadata.json     # Current metadata
 │   └── old/                  # Legacy data
 │       └── siteMetadata.json # Archived metadata
+├── OnePace_Structure/         # Generated folder structure (default)
+│   ├── [One Pace][903-908] Reverie [1080p]/     # Batch torrent folder
+│   ├── [One Pace][1080-1081] Egghead [1080p]/   # Single episode arc folder
+│   └── ...
 └── README.md                 # This file
 ```
 
@@ -311,6 +448,7 @@ OnePaceUtils/
 - **Error Handling**: Comprehensive error handling for network and parsing issues
 - **Data Persistence**: All scraped data is saved in JSON format for reuse
 - **Batch Detection**: Uses file extension presence to distinguish batch vs single torrents
+- **Duplicate Management**: torrentProcessor.py intelligently handles duplicates and quality conflicts
 - **NFO Compatibility**: Generated NFO files work with Jellyfin, Plex, and other media servers
 - **Interactive Mode**: Several scripts provide interactive prompts for user control
 

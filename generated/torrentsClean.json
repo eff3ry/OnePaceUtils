@@ -1,12 +1,202 @@
 {
   "metadata": {
-    "generated_at": "2025-09-02T22:20:11.465850",
-    "source_url": "https://nyaa.si/user/Galaxy9000",
-    "uploader": "Galaxy9000",
-    "total_torrents_found": 213,
+    "generated_at": "2025-09-02T22:21:20.882269",
+    "source_file": "generated\\torrentsRaw.json",
+    "processed_with": "torrentProcessor.py",
+    "total_torrents_processed": 151,
+    "processing_stats": {
+      "total_input": 213,
+      "removed_low_seeders": 45,
+      "removed_duplicates": 17,
+      "batch_single_conflicts": 0,
+      "final_count": 151
+    },
+    "min_seeders_threshold": 5,
     "version": "1.0"
   },
   "torrents": [
+    {
+      "title": "[One Pace][1-7] Romance Dawn [1080p]",
+      "magnet_link": "magnet:?xt=urn:btih:cdab4a928dbbff643bbe5531f216eb36a60c85af&dn=%5BOne%20Pace%5D%5B1-7%5D%20Romance%20Dawn%20%5B1080p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "2.0 GiB",
+        "bytes": 2147483648
+      },
+      "upload_date": "2025-05-03 07:42",
+      "seeders": 64,
+      "leechers": 1,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1966911"
+    },
+    {
+      "title": "[One Pace][903-908] Reverie [1080p]",
+      "magnet_link": "magnet:?xt=urn:btih:4d9497e964d820760adf11e47664df3091b808f2&dn=%5BOne%20Pace%5D%5B903-908%5D%20Reverie%20%5B1080p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "2.7 GiB",
+        "bytes": 2899102924
+      },
+      "upload_date": "2024-10-05 03:18",
+      "seeders": 48,
+      "leechers": 1,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1880864"
+    },
+    {
+      "title": "[One Pace][199-201] Arabasta 16 - April Fools [1080p][2F71D53E]",
+      "magnet_link": "magnet:?xt=urn:btih:e513256e0e4f24fc950dd5c1aec9a38c9e5a75d2&dn=%5BOne%20Pace%5D%5B199-201%5D%20Arabasta%2016%20-%20April%20Fools%20%5B1080p%5D%5B2F71D53E%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "152.7 MiB",
+        "bytes": 160117555
+      },
+      "upload_date": "2024-03-31 17:51",
+      "seeders": 16,
+      "leechers": 0,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1797142"
+    },
+    {
+      "title": "[One Pace][67-68] Baratie 08 [1080p][D8C1FD62].mkv (formerly Baratie 09)",
+      "magnet_link": "magnet:?xt=urn:btih:d42ad6406584c715482920f7014eb190acaf601c&dn=%5BOne%20Pace%5D%5B67-68%5D%20Baratie%2008%20%5B1080p%5D%5BD8C1FD62%5D.mkv%20%28formerly%20Baratie%2009%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "366.2 MiB",
+        "bytes": 383988531
+      },
+      "upload_date": "2023-07-29 02:22",
+      "seeders": 87,
+      "leechers": 0,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1698208"
+    },
+    {
+      "title": "[One Pace][63-67] Baratie 07 [1080p][F850EAFD].mkv (formerly Baratie 08)",
+      "magnet_link": "magnet:?xt=urn:btih:ca0b3f280f40b9818a3c1624d800d4f2491ff87f&dn=%5BOne%20Pace%5D%5B63-67%5D%20Baratie%2007%20%5B1080p%5D%5BF850EAFD%5D.mkv%20%28formerly%20Baratie%2008%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "642.2 MiB",
+        "bytes": 673395507
+      },
+      "upload_date": "2023-07-21 22:28",
+      "seeders": 86,
+      "leechers": 0,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1695579"
+    },
+    {
+      "title": "[One Pace][59-63] Baratie 06 [1080p][A1039182].mkv (formerly Baratie 07)",
+      "magnet_link": "magnet:?xt=urn:btih:a0d4026bf8196196113b983517023ab4b1533359&dn=%5BOne%20Pace%5D%5B59-63%5D%20Baratie%2006%20%5B1080p%5D%5BA1039182%5D.mkv%20%28formerly%20Baratie%2007%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "579.7 MiB",
+        "bytes": 607859507
+      },
+      "upload_date": "2023-07-02 16:08",
+      "seeders": 91,
+      "leechers": 0,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1688916"
+    },
+    {
+      "title": "[One Pace][598-602] Return to Sabaody [1080p]",
+      "magnet_link": "magnet:?xt=urn:btih:77cc4c78deedc5b7048cd72620688bf37de17032&dn=%5BOne%20Pace%5D%5B598-602%5D%20Return%20to%20Sabaody%20%5B1080p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "2.2 GiB",
+        "bytes": 2362232012
+      },
+      "upload_date": "2022-05-05 04:27",
+      "seeders": 91,
+      "leechers": 0,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1524087"
+    },
+    {
+      "title": "[One Pace][8-21] Orange Town [1080p]",
+      "magnet_link": "magnet:?xt=urn:btih:d54ad844dcb2fcfd63bb3ef401f5004102aa39f0&dn=%5BOne%20Pace%5D%5B8-21%5D%20Orange%20Town%20%5B1080p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "1.9 GiB",
+        "bytes": 2040109465
+      },
+      "upload_date": "2021-08-07 22:46",
+      "seeders": 149,
+      "leechers": 0,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1418352"
+    },
+    {
+      "title": "[One Pace][938-939] Wano 20 [1080p][93376225]",
+      "magnet_link": "magnet:?xt=urn:btih:d587b519994e3a8f771d188981f7a59fd6d578e5&dn=%5BOne%20Pace%5D%5B938-939%5D%20Wano%2020%20%5B1080p%5D%5B93376225%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "1.7 GiB",
+        "bytes": 1825361100
+      },
+      "upload_date": "2021-01-09 02:26",
+      "seeders": 67,
+      "leechers": 0,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1324851"
+    },
+    {
+      "title": "[One Pace][823-902] Whole Cake Island [720p][ENG-ESP]",
+      "magnet_link": "magnet:?xt=urn:btih:8eae38e998ff4e537f0974ab4249f89479fb644d&dn=%5BOne%20Pace%5D%5B823-902%5D%20Whole%20Cake%20Island%20%5B720p%5D%5BENG-ESP%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "9.1 GiB",
+        "bytes": 9771050598
+      },
+      "upload_date": "2020-12-11 04:17",
+      "seeders": 143,
+      "leechers": 5,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1313289"
+    },
+    {
+      "title": "[One Pace][549-580] Marineford [720p][ENG-ESP]",
+      "magnet_link": "magnet:?xt=urn:btih:3e96ef072e3798dc20d9c9fe21700eee27ff8312&dn=%5BOne%20Pace%5D%5B549-580%5D%20Marineford%20%5B720p%5D%5BENG-ESP%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "3.4 GiB",
+        "bytes": 3650722201
+      },
+      "upload_date": "2020-10-07 20:49",
+      "seeders": 100,
+      "leechers": 3,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1287648"
+    },
+    {
+      "title": "[One Pace][96-100] Loguetown [480p][Dual-Audio][ENG-ESP]",
+      "magnet_link": "magnet:?xt=urn:btih:fc5f605b1fc12f8a14b6176690151ea53bcb7e19&dn=%5BOne%20Pace%5D%5B96-100%5D%20Loguetown%20%5B480p%5D%5BDual-Audio%5D%5BENG-ESP%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "681.6 MiB",
+        "bytes": 714709401
+      },
+      "upload_date": "2020-09-22 22:56",
+      "seeders": 131,
+      "leechers": 3,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1282922"
+    },
+    {
+      "title": "[One Pace][69-95] Arlong Park [480p][Dual-Audio][ENG-ESP]",
+      "magnet_link": "magnet:?xt=urn:btih:4c688038db6ae51893f505fbb0c12eafacde8f4b&dn=%5BOne%20Pace%5D%5B69-95%5D%20Arlong%20Park%20%5B480p%5D%5BDual-Audio%5D%5BENG-ESP%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "1.6 GiB",
+        "bytes": 1717986918
+      },
+      "upload_date": "2020-09-13 01:43",
+      "seeders": 96,
+      "leechers": 9,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1279925"
+    },
+    {
+      "title": "[One Pace][909-924] Wano Act 1",
+      "magnet_link": "magnet:?xt=urn:btih:d67ed82392c28cb6c40509383ba70bfb4e6aefdf&dn=%5BOne%20Pace%5D%5B909-924%5D%20Wano%20Act%201&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+      "file_size": {
+        "raw": "8.7 GiB",
+        "bytes": 9341553868
+      },
+      "upload_date": "2020-04-09 06:23",
+      "seeders": 125,
+      "leechers": 12,
+      "is_batch": true,
+      "torrent_page_url": "https://nyaa.si/view/1236480"
+    },
     {
       "title": "[One Pace][1089-1090] Egghead 19 Extended [1080p][93B80191].mkv",
       "magnet_link": "magnet:?xt=urn:btih:f1145e93416adc5dcc84c1a761c7d1363c24ec1e&dn=%5BOne%20Pace%5D%5B1089-1090%5D%20Egghead%2019%20Extended%20%5B1080p%5D%5B93B80191%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
@@ -19,19 +209,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/2012476"
-    },
-    {
-      "title": "[One Pace][1089-1090] Egghead 19 [1080p][6AE11B21].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:8505a46f6568b9b3c541ac4658566dd9fd009f0a&dn=%5BOne%20Pace%5D%5B1089-1090%5D%20Egghead%2019%20%5B1080p%5D%5B6AE11B21%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "939.4 MiB",
-        "bytes": 985032294
-      },
-      "upload_date": "2025-08-29 13:09",
-      "seeders": 25,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/2012475"
     },
     {
       "title": "[One Pace][1084-1085] Egghead 16 [1080p][7A93DCC5].mkv",
@@ -97,19 +274,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/2004230"
-    },
-    {
-      "title": "[One Pace][1080-1081] Egghead 14 [1080p][3C0010BE].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:c3a348f1134137296151a65871ba511f76421502&dn=%5BOne%20Pace%5D%5B1080-1081%5D%20Egghead%2014%20%5B1080p%5D%5B3C0010BE%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "1.4 GiB",
-        "bytes": 1503238553
-      },
-      "upload_date": "2025-08-09 18:18",
-      "seeders": 25,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/2004229"
     },
     {
       "title": "[One Pace][48-52] Baratie 03 [1080p][E90342F6].mkv",
@@ -242,19 +406,6 @@
       "torrent_page_url": "https://nyaa.si/view/1992016"
     },
     {
-      "title": "[One Pace][996-997] Wano 53 [1080p][CE6E899D].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:59bc6fc10ad0ea2543837161db2764d6ee117248&dn=%5BOne%20Pace%5D%5B996-997%5D%20Wano%2053%20%5B1080p%5D%5BCE6E899D%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "1.5 GiB",
-        "bytes": 1610612736
-      },
-      "upload_date": "2025-07-07 05:31",
-      "seeders": 18,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1990297"
-    },
-    {
       "title": "[One Pace][31-34] Syrup Village 04 [1080p][89B18321].mkv",
       "magnet_link": "magnet:?xt=urn:btih:1e32b2b30826d6dcd0833a8415c11a25a2883d9e&dn=%5BOne%20Pace%5D%5B31-34%5D%20Syrup%20Village%2004%20%5B1080p%5D%5B89B18321%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
       "file_size": {
@@ -266,19 +417,6 @@
       "leechers": 1,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1990296"
-    },
-    {
-      "title": "[One Pace][1079] Egghead 13 [1080p][6C170189].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:7649738b740f660e286a2364114179ec5e0ca997&dn=%5BOne%20Pace%5D%5B1079%5D%20Egghead%2013%20%5B1080p%5D%5B6C170189%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "597.9 MiB",
-        "bytes": 626943590
-      },
-      "upload_date": "2025-06-29 23:45",
-      "seeders": 18,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1987736"
     },
     {
       "title": "[One Pace][1079] Egghead 13 Extended [1080p][482F69B7].mkv",
@@ -411,19 +549,6 @@
       "torrent_page_url": "https://nyaa.si/view/1974748"
     },
     {
-      "title": "[One Pace][988-989] Wano 49 [1080p][FE878EE8].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:27241175a0cd443f73df94dcbd44abef2a22176f&dn=%5BOne%20Pace%5D%5B988-989%5D%20Wano%2049%20%5B1080p%5D%5BFE878EE8%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "1.5 GiB",
-        "bytes": 1610612736
-      },
-      "upload_date": "2025-05-24 01:10",
-      "seeders": 16,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1974747"
-    },
-    {
       "title": "[One Pace][303] Long Ring Long Land 00 [1080p][E85B9E9D].mkv",
       "magnet_link": "magnet:?xt=urn:btih:eba02743616eef490bdd3417d67cb9cad1a43260&dn=%5BOne%20Pace%5D%5B303%5D%20Long%20Ring%20Long%20Land%2000%20%5B1080p%5D%5BE85B9E9D%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
       "file_size": {
@@ -461,19 +586,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1972744"
-    },
-    {
-      "title": "[One Pace][909-911] Wano 02 Extended [1080p][6F26FDAB].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:7ffbac3cd827eed21309b4c451135564b82029eb&dn=%5BOne%20Pace%5D%5B909-911%5D%20Wano%2002%20Extended%20%5B1080p%5D%5B6F26FDAB%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "1.7 GiB",
-        "bytes": 1825361100
-      },
-      "upload_date": "2025-05-18 01:04",
-      "seeders": 22,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1972743"
     },
     {
       "title": "[One Pace][19-21] Orange Town 03 [1080p][1809DA8A].mkv",
@@ -526,19 +638,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1967575"
-    },
-    {
-      "title": "[One Pace][1-7] Romance Dawn [1080p]",
-      "magnet_link": "magnet:?xt=urn:btih:cdab4a928dbbff643bbe5531f216eb36a60c85af&dn=%5BOne%20Pace%5D%5B1-7%5D%20Romance%20Dawn%20%5B1080p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "2.0 GiB",
-        "bytes": 2147483648
-      },
-      "upload_date": "2025-05-03 07:42",
-      "seeders": 64,
-      "leechers": 1,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1966911"
     },
     {
       "title": "[One Pace][1075-1076] Egghead 11 [1080p][448628C9].mkv",
@@ -632,32 +731,6 @@
       "torrent_page_url": "https://nyaa.si/view/1958602"
     },
     {
-      "title": "[One Pace][38-39] Syrup Village 06 [1080p][F9DE972C].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:dcec5a7b2f15cc18e8870a7fb216cdd698bf5592&dn=%5BOne%20Pace%5D%5B38-39%5D%20Syrup%20Village%2006%20%5B1080p%5D%5BF9DE972C%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "520.1 MiB",
-        "bytes": 545364377
-      },
-      "upload_date": "2025-04-12 01:03",
-      "seeders": 27,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1958601"
-    },
-    {
-      "title": "[One Pace][35-37] Syrup Village 05 [1080p][F2D99494].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:48e5976c5d0556f1ee5e6ed0ee437c49eb9b5a37&dn=%5BOne%20Pace%5D%5B35-37%5D%20Syrup%20Village%2005%20%5B1080p%5D%5BF2D99494%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "618.7 MiB",
-        "bytes": 648753971
-      },
-      "upload_date": "2025-04-12 01:03",
-      "seeders": 28,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1958600"
-    },
-    {
       "title": "[One Pace][909-910] Wano 01 [1080p][F15AFDE0].mkv",
       "magnet_link": "magnet:?xt=urn:btih:a95a47258e52e42532aa2960a0e0a979c1d259a8&dn=%5BOne%20Pace%5D%5B909-910%5D%20Wano%2001%20%5B1080p%5D%5BF15AFDE0%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
       "file_size": {
@@ -736,32 +809,6 @@
       "torrent_page_url": "https://nyaa.si/view/1950691"
     },
     {
-      "title": "[One Pace][1084-1085] Egghead 16 [1080p][78ED23DF].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:a2ad22fe28b0940ed289e739f4a8b16d06bb71a5&dn=%5BOne%20Pace%5D%5B1084-1085%5D%20Egghead%2016%20%5B1080p%5D%5B78ED23DF%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "547.3 MiB",
-        "bytes": 573885644
-      },
-      "upload_date": "2025-03-15 00:14",
-      "seeders": 38,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1947899"
-    },
-    {
-      "title": "[One Pace][1082-1083] Egghead 15 [1080p][B9537A27].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:4a60ad632a7b0e83751ca6b5202208e38f864bea&dn=%5BOne%20Pace%5D%5B1082-1083%5D%20Egghead%2015%20%5B1080p%5D%5BB9537A27%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "665.1 MiB",
-        "bytes": 697407897
-      },
-      "upload_date": "2025-03-08 07:08",
-      "seeders": 34,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1945227"
-    },
-    {
       "title": "[One Pace][1069-1070] Egghead 08 Extended [1080p][1FDB8A9C].mkv",
       "magnet_link": "magnet:?xt=urn:btih:bac20460989089c1493483d323db3e3c6de376ef&dn=%5BOne%20Pace%5D%5B1069-1070%5D%20Egghead%2008%20Extended%20%5B1080p%5D%5B1FDB8A9C%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
       "file_size": {
@@ -773,19 +820,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1945226"
-    },
-    {
-      "title": "[One Pace][1069-1070] Egghead 08 [1080p][4C1997F3].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:69509c80416517dc017f21d3b5712cdf066db8bb&dn=%5BOne%20Pace%5D%5B1069-1070%5D%20Egghead%2008%20%5B1080p%5D%5B4C1997F3%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "1.1 GiB",
-        "bytes": 1181116006
-      },
-      "upload_date": "2025-03-08 07:00",
-      "seeders": 16,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1945225"
     },
     {
       "title": "[One Pace][299-300] Skypiea 23 [1080p][D9CD96CA].mkv",
@@ -840,19 +874,6 @@
       "torrent_page_url": "https://nyaa.si/view/1935893"
     },
     {
-      "title": "[One Pace][31-34] Syrup Village 04 [1080p][A594704B].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:3a167e3dded838a458516deae20e6ae281fd1e8d&dn=%5BOne%20Pace%5D%5B31-34%5D%20Syrup%20Village%2004%20%5B1080p%5D%5BA594704B%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "703.2 MiB",
-        "bytes": 737358643
-      },
-      "upload_date": "2025-02-07 23:03",
-      "seeders": 30,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1932420"
-    },
-    {
       "title": "[One Pace][1066] Egghead 06 [1080p][69F1BBD5].mkv",
       "magnet_link": "magnet:?xt=urn:btih:aac0cb0e0a9d3fb1695e53887134887fb2f15a9e&dn=%5BOne%20Pace%5D%5B1066%5D%20Egghead%2006%20%5B1080p%5D%5B69F1BBD5%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
       "file_size": {
@@ -877,19 +898,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1929185"
-    },
-    {
-      "title": "[One Pace][79-81] Arlong Park 05 [1080p][1CC0DA84].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:e4e05d868640c3540e37067e17b04ac579cc1d61&dn=%5BOne%20Pace%5D%5B79-81%5D%20Arlong%20Park%2005%20%5B1080p%5D%5B1CC0DA84%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "683.4 MiB",
-        "bytes": 716596838
-      },
-      "upload_date": "2025-02-01 02:44",
-      "seeders": 21,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1929184"
     },
     {
       "title": "[One Pace][77-78] Arlong Park 04 [1080p][DB23E2E6].mkv",
@@ -1085,19 +1093,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1891125"
-    },
-    {
-      "title": "[One Pace][903-908] Reverie [1080p]",
-      "magnet_link": "magnet:?xt=urn:btih:4d9497e964d820760adf11e47664df3091b808f2&dn=%5BOne%20Pace%5D%5B903-908%5D%20Reverie%20%5B1080p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "2.7 GiB",
-        "bytes": 2899102924
-      },
-      "upload_date": "2024-10-05 03:18",
-      "seeders": 48,
-      "leechers": 1,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1880864"
     },
     {
       "title": "[One Pace][977-978] Wano 43 [1080p][26D98629].mkv",
@@ -1319,19 +1314,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1802323"
-    },
-    {
-      "title": "[One Pace][199-201] Arabasta 16 - April Fools [1080p][2F71D53E]",
-      "magnet_link": "magnet:?xt=urn:btih:e513256e0e4f24fc950dd5c1aec9a38c9e5a75d2&dn=%5BOne%20Pace%5D%5B199-201%5D%20Arabasta%2016%20-%20April%20Fools%20%5B1080p%5D%5B2F71D53E%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "152.7 MiB",
-        "bytes": 160117555
-      },
-      "upload_date": "2024-03-31 17:51",
-      "seeders": 16,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1797142"
     },
     {
       "title": "[One Pace][543-560] If You Could Go Anywhere... The Adventures of the Straw Hats [1080p][2BC41092].mkv",
@@ -1607,32 +1589,6 @@
       "torrent_page_url": "https://nyaa.si/view/1698209"
     },
     {
-      "title": "[One Pace][67-68] Baratie 08 [1080p][D8C1FD62].mkv (formerly Baratie 09)",
-      "magnet_link": "magnet:?xt=urn:btih:d42ad6406584c715482920f7014eb190acaf601c&dn=%5BOne%20Pace%5D%5B67-68%5D%20Baratie%2008%20%5B1080p%5D%5BD8C1FD62%5D.mkv%20%28formerly%20Baratie%2009%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "366.2 MiB",
-        "bytes": 383988531
-      },
-      "upload_date": "2023-07-29 02:22",
-      "seeders": 87,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1698208"
-    },
-    {
-      "title": "[One Pace][63-67] Baratie 07 [1080p][F850EAFD].mkv (formerly Baratie 08)",
-      "magnet_link": "magnet:?xt=urn:btih:ca0b3f280f40b9818a3c1624d800d4f2491ff87f&dn=%5BOne%20Pace%5D%5B63-67%5D%20Baratie%2007%20%5B1080p%5D%5BF850EAFD%5D.mkv%20%28formerly%20Baratie%2008%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "642.2 MiB",
-        "bytes": 673395507
-      },
-      "upload_date": "2023-07-21 22:28",
-      "seeders": 86,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1695579"
-    },
-    {
       "title": "[One Pace][957] Wano 32 [1080p][29B91F56].mkv",
       "magnet_link": "magnet:?xt=urn:btih:89bdea16caeaa66658592cd75be624c0a9dce31a&dn=%5BOne%20Pace%5D%5B957%5D%20Wano%2032%20%5B1080p%5D%5B29B91F56%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
       "file_size": {
@@ -1644,19 +1600,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1695576"
-    },
-    {
-      "title": "[One Pace][59-63] Baratie 06 [1080p][A1039182].mkv (formerly Baratie 07)",
-      "magnet_link": "magnet:?xt=urn:btih:a0d4026bf8196196113b983517023ab4b1533359&dn=%5BOne%20Pace%5D%5B59-63%5D%20Baratie%2006%20%5B1080p%5D%5BA1039182%5D.mkv%20%28formerly%20Baratie%2007%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "579.7 MiB",
-        "bytes": 607859507
-      },
-      "upload_date": "2023-07-02 16:08",
-      "seeders": 91,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1688916"
     },
     {
       "title": "[One Pace][956] Wano 31 [1080p][F6C7EB83].mkv",
@@ -1763,19 +1706,6 @@
       "torrent_page_url": "https://nyaa.si/view/1679185"
     },
     {
-      "title": "[One Pace][56-59] Baratie 05 [1080p][757AF173].mkv (formerly Baratie 06)",
-      "magnet_link": "magnet:?xt=urn:btih:a8813f7e4bd753fa76e32ee2b5288cffb5c898f8&dn=%5BOne%20Pace%5D%5B56-59%5D%20Baratie%2005%20%5B1080p%5D%5B757AF173%5D.mkv%20%28formerly%20Baratie%2006%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "520.0 MiB",
-        "bytes": 545259520
-      },
-      "upload_date": "2023-05-28 16:46",
-      "seeders": 84,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1676748"
-    },
-    {
       "title": "[One Pace][145-148] Drum Island 06 [1080p][A5145C90].mkv",
       "magnet_link": "magnet:?xt=urn:btih:b6d264228c2fb62b413d9f73a9d546495fc35069&dn=%5BOne%20Pace%5D%5B145-148%5D%20Drum%20Island%2006%20%5B1080p%5D%5BA5145C90%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
       "file_size": {
@@ -1787,19 +1717,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1672420"
-    },
-    {
-      "title": "[One Pace][53-55] Baratie 04 [1080p][6858E16A].mkv (formerly Baratie 05)",
-      "magnet_link": "magnet:?xt=urn:btih:45a8b8b178f0f611bf48951edafcec57bf06c9f9&dn=%5BOne%20Pace%5D%5B53-55%5D%20Baratie%2004%20%5B1080p%5D%5B6858E16A%5D.mkv%20%28formerly%20Baratie%2005%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "484.3 MiB",
-        "bytes": 507825356
-      },
-      "upload_date": "2023-05-14 23:20",
-      "seeders": 85,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1672028"
     },
     {
       "title": "[One Pace][155-157] Arabasta 01 [1080p][BB1D093C].mkv",
@@ -1826,19 +1743,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1657239"
-    },
-    {
-      "title": "[One Pace] Tournament of Power.mp4",
-      "magnet_link": "magnet:?xt=urn:btih:bc6a301a348a78348aa65b4ec28320e450f2768a&dn=%5BOne%20Pace%5D%20Tournament%20of%20Power.mp4&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "2.3 GiB",
-        "bytes": 2469606195
-      },
-      "upload_date": "2023-03-31 04:20",
-      "seeders": 4,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1654986"
     },
     {
       "title": "[One Pace][141-145] Drum Island 05 [1080p][E7044DBE].mkv",
@@ -1891,19 +1795,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1633269"
-    },
-    {
-      "title": "[One Pace][42,22] Gaimon 01 [1080p][0C2DBF75].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:b83d8260265b01910c0068b2b488d81b674917ea&dn=%5BOne%20Pace%5D%5B42%2C22%5D%20Gaimon%2001%20%5B1080p%5D%5B0C2DBF75%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "480.3 MiB",
-        "bytes": 503631052
-      },
-      "upload_date": "2023-01-29 01:08",
-      "seeders": 44,
-      "leechers": 0,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1630907"
     },
     {
       "title": "[One Pace][218-220] Jaya 01 [1080p][2BBCD106].mkv",
@@ -2036,123 +1927,6 @@
       "torrent_page_url": "https://nyaa.si/view/1537206"
     },
     {
-      "title": "[One Pace][598-602] Return to Sabaody [1080p]",
-      "magnet_link": "magnet:?xt=urn:btih:77cc4c78deedc5b7048cd72620688bf37de17032&dn=%5BOne%20Pace%5D%5B598-602%5D%20Return%20to%20Sabaody%20%5B1080p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "2.2 GiB",
-        "bytes": 2362232012
-      },
-      "upload_date": "2022-05-05 04:27",
-      "seeders": 91,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1524087"
-    },
-    {
-      "title": "[One Pace][1-7] Romance Dawn [1080p] (Defunct)",
-      "magnet_link": "magnet:?xt=urn:btih:d42d71270da00dd578e34fb28517a5fffe4d2cfb&dn=%5BOne%20Pace%5D%5B1-7%5D%20Romance%20Dawn%20%5B1080p%5D%20%28Defunct%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "1.7 GiB",
-        "bytes": 1825361100
-      },
-      "upload_date": "2021-12-27 03:23",
-      "seeders": 226,
-      "leechers": 6,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1471659"
-    },
-    {
-      "title": "[One Pace][8-21] Orange Town [1080p]",
-      "magnet_link": "magnet:?xt=urn:btih:d54ad844dcb2fcfd63bb3ef401f5004102aa39f0&dn=%5BOne%20Pace%5D%5B8-21%5D%20Orange%20Town%20%5B1080p%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "1.9 GiB",
-        "bytes": 2040109465
-      },
-      "upload_date": "2021-08-07 22:46",
-      "seeders": 149,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1418352"
-    },
-    {
-      "title": "[One Pace][938-939] Wano 20 [1080p][93376225]",
-      "magnet_link": "magnet:?xt=urn:btih:d587b519994e3a8f771d188981f7a59fd6d578e5&dn=%5BOne%20Pace%5D%5B938-939%5D%20Wano%2020%20%5B1080p%5D%5B93376225%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "1.7 GiB",
-        "bytes": 1825361100
-      },
-      "upload_date": "2021-01-09 02:26",
-      "seeders": 67,
-      "leechers": 0,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1324851"
-    },
-    {
-      "title": "[One Pace][823-902] Whole Cake Island [720p][ENG-ESP]",
-      "magnet_link": "magnet:?xt=urn:btih:8eae38e998ff4e537f0974ab4249f89479fb644d&dn=%5BOne%20Pace%5D%5B823-902%5D%20Whole%20Cake%20Island%20%5B720p%5D%5BENG-ESP%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "9.1 GiB",
-        "bytes": 9771050598
-      },
-      "upload_date": "2020-12-11 04:17",
-      "seeders": 143,
-      "leechers": 5,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1313289"
-    },
-    {
-      "title": "[One Pace][549-580] Marineford [720p][ENG-ESP]",
-      "magnet_link": "magnet:?xt=urn:btih:3e96ef072e3798dc20d9c9fe21700eee27ff8312&dn=%5BOne%20Pace%5D%5B549-580%5D%20Marineford%20%5B720p%5D%5BENG-ESP%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "3.4 GiB",
-        "bytes": 3650722201
-      },
-      "upload_date": "2020-10-07 20:49",
-      "seeders": 100,
-      "leechers": 3,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1287648"
-    },
-    {
-      "title": "[One Pace][96-100] Loguetown [480p][Dual-Audio][ENG-ESP]",
-      "magnet_link": "magnet:?xt=urn:btih:fc5f605b1fc12f8a14b6176690151ea53bcb7e19&dn=%5BOne%20Pace%5D%5B96-100%5D%20Loguetown%20%5B480p%5D%5BDual-Audio%5D%5BENG-ESP%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "681.6 MiB",
-        "bytes": 714709401
-      },
-      "upload_date": "2020-09-22 22:56",
-      "seeders": 131,
-      "leechers": 3,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1282922"
-    },
-    {
-      "title": "[One Pace][69-95] Arlong Park [480p][Dual-Audio][ENG-ESP]",
-      "magnet_link": "magnet:?xt=urn:btih:4c688038db6ae51893f505fbb0c12eafacde8f4b&dn=%5BOne%20Pace%5D%5B69-95%5D%20Arlong%20Park%20%5B480p%5D%5BDual-Audio%5D%5BENG-ESP%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "1.6 GiB",
-        "bytes": 1717986918
-      },
-      "upload_date": "2020-09-13 01:43",
-      "seeders": 96,
-      "leechers": 9,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1279925"
-    },
-    {
-      "title": "[One Pace][909-924] Wano Act 1",
-      "magnet_link": "magnet:?xt=urn:btih:d67ed82392c28cb6c40509383ba70bfb4e6aefdf&dn=%5BOne%20Pace%5D%5B909-924%5D%20Wano%20Act%201&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "8.7 GiB",
-        "bytes": 9341553868
-      },
-      "upload_date": "2020-04-09 06:23",
-      "seeders": 125,
-      "leechers": 12,
-      "is_batch": true,
-      "torrent_page_url": "https://nyaa.si/view/1236480"
-    },
-    {
       "title": "[One Pace][401-402] Enies Lobby 12 [720p][DA166192].mkv",
       "magnet_link": "magnet:?xt=urn:btih:5b49e7a4640ec5b8e455ea5be5cef520fea82da7&dn=%5BOne%20Pace%5D%5B401-402%5D%20Enies%20Lobby%2012%20%5B720p%5D%5BDA166192%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
       "file_size": {
@@ -2164,19 +1938,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1228253"
-    },
-    {
-      "title": "[One Pace][905-906] Reverie 02 [720p][202E6B32].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:4ecaadfd5c0b3f17634e629e4fcc887386fff6fc&dn=%5BOne%20Pace%5D%5B905-906%5D%20Reverie%2002%20%5B720p%5D%5B202E6B32%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "228.1 MiB",
-        "bytes": 239180185
-      },
-      "upload_date": "2019-06-15 05:54",
-      "seeders": 1,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1151263"
     },
     {
       "title": "[One Pace][391-393] Enies Lobby 08 [720p][DECF4267].mkv",
@@ -2205,188 +1966,6 @@
       "torrent_page_url": "https://nyaa.si/view/1143087"
     },
     {
-      "title": "[One Pace][903-904] Reverie 01 [720p][728FD8D8].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:2d2bd558e4744b494b1280bc1b05c43d8d0ce7a9&dn=%5BOne%20Pace%5D%5B903-904%5D%20Reverie%2001%20%5B720p%5D%5B728FD8D8%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "207.6 MiB",
-        "bytes": 217684377
-      },
-      "upload_date": "2019-04-30 02:10",
-      "seeders": 1,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1139832"
-    },
-    {
-      "title": "[One Pace][898-900] Whole Cake Island 38 [720p][914E7EA6].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:2872b7fbe1d4d0af802d8778bda82272d0952807&dn=%5BOne%20Pace%5D%5B898-900%5D%20Whole%20Cake%20Island%2038%20%5B720p%5D%5B914E7EA6%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "345.6 MiB",
-        "bytes": 362387865
-      },
-      "upload_date": "2019-03-22 00:22",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1128719"
-    },
-    {
-      "title": "[One Pace][896-897] Whole Cake Island 37 [720p][CF4FCE05].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:daaaccb75f821884a63aed6c70aa10675512a0e9&dn=%5BOne%20Pace%5D%5B896-897%5D%20Whole%20Cake%20Island%2037%20%5B720p%5D%5BCF4FCE05%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "195.0 MiB",
-        "bytes": 204472320
-      },
-      "upload_date": "2019-03-06 00:12",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1124251"
-    },
-    {
-      "title": "[One Pace][892-895] Whole Cake Island 36 [720p][B9B84ED5].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:18bcfa2002f3a5d9d3fd796e73359d602e068138&dn=%5BOne%20Pace%5D%5B892-895%5D%20Whole%20Cake%20Island%2036%20%5B720p%5D%5BB9B84ED5%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "307.6 MiB",
-        "bytes": 322541977
-      },
-      "upload_date": "2019-03-03 22:07",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1123816"
-    },
-    {
-      "title": "[One Pace][891-893] Whole Cake Island 35 [720p][CDEBF3F8].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:09785b8ba4555c90c6958ad385b96d4a164cbc44&dn=%5BOne%20Pace%5D%5B891-893%5D%20Whole%20Cake%20Island%2035%20%5B720p%5D%5BCDEBF3F8%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "262.0 MiB",
-        "bytes": 274726912
-      },
-      "upload_date": "2019-03-03 19:09",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1123774"
-    },
-    {
-      "title": "[One Pace][889-891] Whole Cake Island 34 [720p][0A9CEB2B].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:17280a3e7735efee3af6cd759f2264540f3ed2c1&dn=%5BOne%20Pace%5D%5B889-891%5D%20Whole%20Cake%20Island%2034%20%5B720p%5D%5B0A9CEB2B%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "287.9 MiB",
-        "bytes": 301885030
-      },
-      "upload_date": "2019-03-01 03:17",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1122760"
-    },
-    {
-      "title": "[One Pace][887-888] Whole Cake Island 33 [720p][7CE5E547].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:c86e345fc5386c73e393159b715fa7dcf1614f5a&dn=%5BOne%20Pace%5D%5B887-888%5D%20Whole%20Cake%20Island%2033%20%5B720p%5D%5B7CE5E547%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "218.3 MiB",
-        "bytes": 228904140
-      },
-      "upload_date": "2019-02-27 02:13",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1122279"
-    },
-    {
-      "title": "[One Pace][885-886] Whole Cake Island 32 [720p][EEA7A87F].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:c969a2afaefd455e3cd88026007c4304ba21317c&dn=%5BOne%20Pace%5D%5B885-886%5D%20Whole%20Cake%20Island%2032%20%5B720p%5D%5BEEA7A87F%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "257.8 MiB",
-        "bytes": 270322892
-      },
-      "upload_date": "2019-02-27 02:12",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1122278"
-    },
-    {
-      "title": "[One Pace][883-884] Whole Cake Island 31 [720p][0CAEBD5B].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:a473ae709ee6590de9a75ce55af6283b7c892e73&dn=%5BOne%20Pace%5D%5B883-884%5D%20Whole%20Cake%20Island%2031%20%5B720p%5D%5B0CAEBD5B%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "260.6 MiB",
-        "bytes": 273258905
-      },
-      "upload_date": "2019-02-23 03:28",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1121095"
-    },
-    {
-      "title": "[One Pace][881-883] Whole Cake Island 30 [720p][71FF0B55].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:ef70b6f97632841bae7df80c4d15f23721194898&dn=%5BOne%20Pace%5D%5B881-883%5D%20Whole%20Cake%20Island%2030%20%5B720p%5D%5B71FF0B55%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "243.6 MiB",
-        "bytes": 255433113
-      },
-      "upload_date": "2019-02-23 03:25",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1121093"
-    },
-    {
-      "title": "[One Pace][879-880] Whole Cake Island 29 [720p][BBB1DBD9].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:46e787125f2446f23966d94990e9017ff4cc3214&dn=%5BOne%20Pace%5D%5B879-880%5D%20Whole%20Cake%20Island%2029%20%5B720p%5D%5BBBB1DBD9%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "225.3 MiB",
-        "bytes": 236244172
-      },
-      "upload_date": "2019-02-16 18:56",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1119543"
-    },
-    {
-      "title": "[One Pace][877-878] Whole Cake Island 28 [720p][ACB7B61D].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:95583927a1757e130b01005e456c57ff88d6d2f1&dn=%5BOne%20Pace%5D%5B877-878%5D%20Whole%20Cake%20Island%2028%20%5B720p%5D%5BACB7B61D%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "233.8 MiB",
-        "bytes": 245157068
-      },
-      "upload_date": "2019-02-15 05:01",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1119076"
-    },
-    {
-      "title": "[One Pace][875-876] Whole Cake Island 27 [720p][622C0683].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:ab2b6db208ae3a7c64ab6f47699af2db4b9d7c56&dn=%5BOne%20Pace%5D%5B875-876%5D%20Whole%20Cake%20Island%2027%20%5B720p%5D%5B622C0683%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "306.9 MiB",
-        "bytes": 321807974
-      },
-      "upload_date": "2019-02-09 04:29",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1117346"
-    },
-    {
-      "title": "[One Pace][873-874] Whole Cake Island 26 [720p][3715392E].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:21153836bf9921cb4a0dfc2587a8f2e64898c325&dn=%5BOne%20Pace%5D%5B873-874%5D%20Whole%20Cake%20Island%2026%20%5B720p%5D%5B3715392E%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "258.9 MiB",
-        "bytes": 271476326
-      },
-      "upload_date": "2019-02-05 08:30",
-      "seeders": 1,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1116247"
-    },
-    {
       "title": "[One Pace][381-382] Enies Lobby 04 [720p][194603B0].mkv",
       "magnet_link": "magnet:?xt=urn:btih:a99c9e4ea0fa627f135d3bc19da96338f4bb540e&dn=%5BOne%20Pace%5D%5B381-382%5D%20Enies%20Lobby%2004%20%5B720p%5D%5B194603B0%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
       "file_size": {
@@ -2398,383 +1977,6 @@
       "leechers": 0,
       "is_batch": false,
       "torrent_page_url": "https://nyaa.si/view/1113091"
-    },
-    {
-      "title": "[One Pace][870-872] Whole Cake Island 25 [720p][D9C8EECA].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:cee821ae57001b675ede74b9f9118060f3e644c1&dn=%5BOne%20Pace%5D%5B870-872%5D%20Whole%20Cake%20Island%2025%20%5B720p%5D%5BD9C8EECA%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "281.3 MiB",
-        "bytes": 294964428
-      },
-      "upload_date": "2019-01-18 23:06",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1111058"
-    },
-    {
-      "title": "[One Pace][869-870] Whole Cake Island 24 [720p][4378CF27].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:1407516679eab613b41f3813522a7cdbe4b3c409&dn=%5BOne%20Pace%5D%5B869-870%5D%20Whole%20Cake%20Island%2024%20%5B720p%5D%5B4378CF27%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "264.7 MiB",
-        "bytes": 277558067
-      },
-      "upload_date": "2018-12-31 04:43",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1106452"
-    },
-    {
-      "title": "[One Pace][867-868] Whole Cake Island 23 [720p][0A99AFB4].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:f19ff4581106108069be8714dba062f21b9f0367&dn=%5BOne%20Pace%5D%5B867-868%5D%20Whole%20Cake%20Island%2023%20%5B720p%5D%5B0A99AFB4%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "267.8 MiB",
-        "bytes": 280808652
-      },
-      "upload_date": "2018-12-13 04:58",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1101804"
-    },
-    {
-      "title": "[One Pace][863-864] Whole Cake Island 21 [720p][CEC099DE].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:ec0220cca6adc2dbf22be88c6cd7210e42802cc9&dn=%5BOne%20Pace%5D%5B863-864%5D%20Whole%20Cake%20Island%2021%20%5B720p%5D%5BCEC099DE%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "247.2 MiB",
-        "bytes": 259207987
-      },
-      "upload_date": "2018-11-20 21:07",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1095892"
-    },
-    {
-      "title": "[One Pace][857-858] Whole Cake Island 18 [720p][A94AF722].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:e9b9ccd7da5ee6a1014343b2c67d11a24e8170ab&dn=%5BOne%20Pace%5D%5B857-858%5D%20Whole%20Cake%20Island%2018%20%5B720p%5D%5BA94AF722%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "233.0 MiB",
-        "bytes": 244318208
-      },
-      "upload_date": "2018-07-31 17:53",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1061986"
-    },
-    {
-      "title": "[One Pace][841-842] Whole Cake Island 10 [720p][347060ED].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:04b1bd98e7799e5eb99fbabe78e06b0c31c0cd1f&dn=%5BOne%20Pace%5D%5B841-842%5D%20Whole%20Cake%20Island%2010%20%5B720p%5D%5B347060ED%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "262.7 MiB",
-        "bytes": 275460915
-      },
-      "upload_date": "2018-07-16 06:30",
-      "seeders": 1,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1057134"
-    },
-    {
-      "title": "[One Pace][853-854] Whole Cake Island 16 [720p][2CA58267].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:8adf31e86f5e7b0f75f163df3c94fc114082448d&dn=%5BOne%20Pace%5D%5B853-854%5D%20Whole%20Cake%20Island%2016%20%5B720p%5D%5B2CA58267%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "186.3 MiB",
-        "bytes": 195349708
-      },
-      "upload_date": "2018-05-26 22:43",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1041244"
-    },
-    {
-      "title": "[One Pace][837-838] Whole Cake Island 08 [720p][99396F83].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:dafd52c21413911de1ae26cb03e593e6d4873b38&dn=%5BOne%20Pace%5D%5B837-838%5D%20Whole%20Cake%20Island%2008%20%5B720p%5D%5B99396F83%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "214.6 MiB",
-        "bytes": 225024409
-      },
-      "upload_date": "2018-05-19 06:18",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1038566"
-    },
-    {
-      "title": "[One Pace][851-852] Whole Cake Island 15 [720p][AC27E460].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:b5d38c55eabce8d3b28811ff6cf92263a24aac69&dn=%5BOne%20Pace%5D%5B851-852%5D%20Whole%20Cake%20Island%2015%20%5B720p%5D%5BAC27E460%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "214.0 MiB",
-        "bytes": 224395264
-      },
-      "upload_date": "2018-05-10 14:43",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1035552"
-    },
-    {
-      "title": "[One Pace] Chapter 835-836 [720p][37E1B3D1].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:60e9e4b2bace37d2b2a1ad5ee479e7977bde8ec3&dn=%5BOne%20Pace%5D%20Chapter%20835-836%20%5B720p%5D%5B37E1B3D1%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "239.2 MiB",
-        "bytes": 250819379
-      },
-      "upload_date": "2018-04-19 04:00",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1028138"
-    },
-    {
-      "title": "[One Pace] Chapter 379-380 [720p][F2E930C5].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:805a5a08c2a2bfe265ad2157b832d378c60edfe1&dn=%5BOne%20Pace%5D%20Chapter%20379-380%20%5B720p%5D%5BF2E930C5%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "214.4 MiB",
-        "bytes": 224814694
-      },
-      "upload_date": "2018-04-10 22:45",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1025428"
-    },
-    {
-      "title": "[One Pace] Chapter 849-850 [720p][0AF54CB5].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:a57ee2ff82dde9b2b373cf5a11505fd2dca04946&dn=%5BOne%20Pace%5D%20Chapter%20849-850%20%5B720p%5D%5B0AF54CB5%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "231.0 MiB",
-        "bytes": 242221056
-      },
-      "upload_date": "2018-03-26 23:15",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1019988"
-    },
-    {
-      "title": "[One Pace] Chapter 377-378 [720p][6C9A99AD].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:624a7e2390da1a564b46cd8a1c3d02dcbefc730a&dn=%5BOne%20Pace%5D%20Chapter%20377-378%20%5B720p%5D%5B6C9A99AD%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "179.5 MiB",
-        "bytes": 188219392
-      },
-      "upload_date": "2018-03-17 02:55",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1016230"
-    },
-    {
-      "title": "[One Pace] Chapter 847-848 [720p][34772777].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:e77b19a113df1eac6a4713ab5be5d090c6fcd046&dn=%5BOne%20Pace%5D%20Chapter%20847-848%20%5B720p%5D%5B34772777%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "209.4 MiB",
-        "bytes": 219571814
-      },
-      "upload_date": "2018-03-09 06:13",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1013637"
-    },
-    {
-      "title": "[One Pace] Chapter 375-376 [720p][B14EAABE].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:3a9516e9f12cbd4e473b9c73a4d838f1435ba71c&dn=%5BOne%20Pace%5D%20Chapter%20375-376%20%5B720p%5D%5BB14EAABE%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "222.3 MiB",
-        "bytes": 233098444
-      },
-      "upload_date": "2018-03-02 07:18",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1011350"
-    },
-    {
-      "title": "[One Pace] Chapter 845-846 [720p][86CA1E99].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:f26941195bbf98578c8a4f290670306826163e7b&dn=%5BOne%20Pace%5D%20Chapter%20845-846%20%5B720p%5D%5B86CA1E99%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "226.7 MiB",
-        "bytes": 237712179
-      },
-      "upload_date": "2018-02-22 07:19",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1008904"
-    },
-    {
-      "title": "[One Pace] Chapter 833-834 [720p][7FC1F643].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:7b08155dcdd550571adbc5c5e1ce9974d8fd85c3&dn=%5BOne%20Pace%5D%20Chapter%20833-834%20%5B720p%5D%5B7FC1F643%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "205.7 MiB",
-        "bytes": 215692083
-      },
-      "upload_date": "2018-02-14 20:39",
-      "seeders": 1,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1006701"
-    },
-    {
-      "title": "[One Pace] Chapter 831-832 [720p][DF6B6FEC].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:f85cad4c0843b093acd3b324ccbd3e9c377836ad&dn=%5BOne%20Pace%5D%20Chapter%20831-832%20%5B720p%5D%5BDF6B6FEC%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "237.6 MiB",
-        "bytes": 249141657
-      },
-      "upload_date": "2018-02-01 20:52",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/1002353"
-    },
-    {
-      "title": "[One Pace] Chapter 829-830 [720p][A0EEC801].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:e26be2a1f029f7837e0e46e8dc31c335e809bba2&dn=%5BOne%20Pace%5D%20Chapter%20829-830%20%5B720p%5D%5BA0EEC801%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "215.0 MiB",
-        "bytes": 225443840
-      },
-      "upload_date": "2018-01-03 14:05",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/993036"
-    },
-    {
-      "title": "[One Pace] Chapter 843-844 [720p][4A6DFB78].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:e722f025b8e2fab31920394cb7ca5e14ce377db7&dn=%5BOne%20Pace%5D%20Chapter%20843-844%20%5B720p%5D%5B4A6DFB78%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "209.8 MiB",
-        "bytes": 219991244
-      },
-      "upload_date": "2017-12-18 06:24",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/988756"
-    },
-    {
-      "title": "[One Pace] Chapter 827-828 [720p][B8A08E6D].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:fc8c3a10c777bd9cfce7a5977793f0fc2f1d25d6&dn=%5BOne%20Pace%5D%20Chapter%20827-828%20%5B720p%5D%5BB8A08E6D%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "195.0 MiB",
-        "bytes": 204472320
-      },
-      "upload_date": "2017-11-17 18:34",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/979614"
-    },
-    {
-      "title": "[One Pace] Chapter 825-826 [720p][837E2CA1].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:cab76032568e9560ad107aae2cce316788b6ec7a&dn=%5BOne%20Pace%5D%20Chapter%20825-826%20%5B720p%5D%5B837E2CA1%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "208.4 MiB",
-        "bytes": 218523238
-      },
-      "upload_date": "2017-11-03 19:07",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/975502"
-    },
-    {
-      "title": "[One Pace] Chapter 801-803 [720p][E70913D9].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:b07e60a2d116cb83102845e79a4dd8c3b401e371&dn=%5BOne%20Pace%5D%20Chapter%20801-803%20%5B720p%5D%5BE70913D9%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "208.1 MiB",
-        "bytes": 218208665
-      },
-      "upload_date": "2017-10-24 04:35",
-      "seeders": 1,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/972260"
-    },
-    {
-      "title": "[One Pace] Chapter 040-041 [480p][6AC6D4DD].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:fe7e2846d6cba05280c27dfb3bd29cdd878ee22b&dn=%5BOne%20Pace%5D%20Chapter%20040-041%20%5B480p%5D%5B6AC6D4DD%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "77.1 MiB",
-        "bytes": 80845209
-      },
-      "upload_date": "2017-10-21 06:02",
-      "seeders": 0,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/971074"
-    },
-    {
-      "title": "[One Pace] Chapter 035-039 [480p][863271C2].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:ee88406f4836a153462d71fc70c01dca8cefb1ad&dn=%5BOne%20Pace%5D%20Chapter%20035-039%20%5B480p%5D%5B863271C2%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "156.1 MiB",
-        "bytes": 163682713
-      },
-      "upload_date": "2017-10-21 04:30",
-      "seeders": 0,
-      "leechers": 2,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/971064"
-    },
-    {
-      "title": "[One Pace][796-797] Dressrosa 47 [720p][01C40FA1].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:b85d7cbff01c42eacccf10b3646cf8a45e3f8129&dn=%5BOne%20Pace%5D%5B796-797%5D%20Dressrosa%2047%20%5B720p%5D%5B01C40FA1%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "250.1 MiB",
-        "bytes": 262248857
-      },
-      "upload_date": "2017-08-20 06:15",
-      "seeders": 0,
-      "leechers": 3,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/951128"
-    },
-    {
-      "title": "[One Pace][794-795] Dressrosa 46 [720p][81C4666C].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:0a48f0ee50f1dcc7204f947e765b98826479bbd5&dn=%5BOne%20Pace%5D%5B794-795%5D%20Dressrosa%2046%20%5B720p%5D%5B81C4666C%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "252.7 MiB",
-        "bytes": 264975155
-      },
-      "upload_date": "2017-06-28 04:24",
-      "seeders": 2,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/934116"
-    },
-    {
-      "title": "[One Pace][28-30] Syrup Village 03 [480p][BB8FBDB3].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:c8c8cdddb7d1a9e0dca2d87f469aef4b4c3c2f0e&dn=%5BOne%20Pace%5D%5B28-30%5D%20Syrup%20Village%2003%20%5B480p%5D%5BBB8FBDB3%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "101.2 MiB",
-        "bytes": 106115891
-      },
-      "upload_date": "2017-06-22 16:05",
-      "seeders": 1,
-      "leechers": 1,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/932819"
-    },
-    {
-      "title": "[One Pace][791-793] Dressrosa 45 [720p][15344804].mkv",
-      "magnet_link": "magnet:?xt=urn:btih:c97c68ec836629c9eed1755d004988e1fbb58189&dn=%5BOne%20Pace%5D%5B791-793%5D%20Dressrosa%2045%20%5B720p%5D%5B15344804%5D.mkv&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-      "file_size": {
-        "raw": "255.9 MiB",
-        "bytes": 268330598
-      },
-      "upload_date": "2017-06-10 06:38",
-      "seeders": 0,
-      "leechers": 3,
-      "is_batch": false,
-      "torrent_page_url": "https://nyaa.si/view/929713"
     }
   ]
 }

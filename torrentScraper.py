@@ -139,11 +139,24 @@ class NyaaScraper:
                 return torrents
             
             rows = table.find('tbody').find_all('tr') if table.find('tbody') else []
+            print(f"Found {len(rows)} total rows on page {page_num}")
+            
+            processed_count = 0
+            skipped_count = 0
+            skip_reasons = {
+                'insufficient_data': 0,
+                'no_title_link': 0,
+                'not_onepace': 0,
+                'processing_error': 0
+            }
             
             for row in rows:
                 try:
                     cells = row.find_all('td')
                     if len(cells) < 6:
+                        print(f"SKIPPED (insufficient data): Row has only {len(cells)} cells, expected at least 6")
+                        skipped_count += 1
+                        skip_reasons['insufficient_data'] += 1
                         continue
                     
                     # Extract torrent info
@@ -155,21 +168,38 @@ class NyaaScraper:
                     seeders_cell = cells[5]
                     leechers_cell = cells[6] if len(cells) > 6 else None
                     
-                    # Get title and torrent page link
-                    title_link = title_cell.find('a')
+                    # Get title and torrent page link - exclude comment links specifically
+                    title_link = title_cell.find('a', href=lambda href: href and '/view/' in href, class_=lambda cls: cls != 'comments')
                     if not title_link:
+                        # Fallback: find any link that's not a comment link and has /view/ in href
+                        all_links = title_cell.find_all('a')
+                        title_link = next((link for link in all_links 
+                                         if link.get('href') and '/view/' in link.get('href') 
+                                         and link.get('class') != ['comments']), None)
+                    
+                    if not title_link:
+                        print(f"SKIPPED (no title link): No torrent title link found in row")
+                        skipped_count += 1
+                        skip_reasons['no_title_link'] += 1
                         continue
                     
                     title = title_link.text.strip()
                     torrent_page_url = urllib.parse.urljoin("https://nyaa.si", title_link['href'])
                     
-                    # Check if it's a OnePace file
-                    if 'onepace' not in title.lower() and 'one pace' not in title.lower():
+                    # Since we're scraping from Galaxy9000's user page, all torrents should be OnePace
+                    # But let's add a more lenient check and log what we're skipping
+                    title_lower = title.lower()
+                    if 'onepace' not in title_lower and 'one pace' not in title_lower and '[one pace]' not in title_lower:
+                        print(f"SKIPPED (not OnePace): '{title}' - Reason: Title doesn't contain 'onepace', 'one pace', or '[one pace]'")
+                        skipped_count += 1
+                        skip_reasons['not_onepace'] += 1
                         continue
                     
-                    # Extract magnet link
-                    print(f"Extracting magnet link for: {title}")
-                    magnet_link = self.extract_magnet_link(torrent_page_url)
+                    # Extract magnet link from the links column (much faster than separate request)
+                    magnet_link = None
+                    magnet_links = links_cell.find_all('a', href=re.compile(r'^magnet:'))
+                    if magnet_links:
+                        magnet_link = magnet_links[0]['href']
                     
                     # Determine if it's a batch torrent using improved logic
                     is_batch = self.is_batch_torrent(title)
@@ -221,14 +251,32 @@ class NyaaScraper:
                         torrent_info['file_list'] = file_list
                     
                     torrents.append(torrent_info)
+                    processed_count += 1
                     print(f"Found: {title}")
                     
-                    # Small delay to be respectful
-                    time.sleep(0.5)
+                    # Small delay only for batch torrents (file list extraction)
+                    if is_batch:
+                        time.sleep(0.3)
+                    else:
+                        time.sleep(0.05)
                     
                 except Exception as e:
-                    print(f"Error processing row: {e}")
+                    print(f"SKIPPED (processing error): Error processing row - {e}")
+                    skipped_count += 1
+                    skip_reasons['processing_error'] += 1
                     continue
+            
+            print(f"Page {page_num} summary: {processed_count} processed, {skipped_count} skipped")
+            if skipped_count > 0:
+                print(f"  Skip breakdown:")
+                if skip_reasons['insufficient_data'] > 0:
+                    print(f"    - Insufficient data: {skip_reasons['insufficient_data']}")
+                if skip_reasons['no_title_link'] > 0:
+                    print(f"    - No title link: {skip_reasons['no_title_link']}")
+                if skip_reasons['not_onepace'] > 0:
+                    print(f"    - Not OnePace: {skip_reasons['not_onepace']}")
+                if skip_reasons['processing_error'] > 0:
+                    print(f"    - Processing errors: {skip_reasons['processing_error']}")
             
         except Exception as e:
             print(f"Error scraping page {page_num}: {e}")
@@ -249,8 +297,8 @@ class NyaaScraper:
             all_torrents.extend(page_torrents)
             print(f"Found {len(page_torrents)} OnePace torrents on page {page}")
             
-            # Delay between pages
-            time.sleep(1)
+            # Short delay between pages
+            time.sleep(0.2)
         
         return all_torrents
     
