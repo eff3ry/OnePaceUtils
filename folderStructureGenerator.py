@@ -24,6 +24,30 @@ class FolderStructureGenerator:
             'skipped_files': 0
         }
     
+    def clean_title(self, title: str) -> str:
+        """
+        Clean the title by removing file extensions and parenthetical notes
+        
+        Examples:
+        [One Pace][67-68] Baratie 08 [1080p][D8C1FD62].mkv (formerly Baratie 09)
+        -> [One Pace][67-68] Baratie 08 [1080p][D8C1FD62]
+        """
+        # Remove file extension if present
+        for ext in self.video_extensions:
+            if title.lower().endswith(ext):
+                title = title[:-len(ext)]
+                break
+        
+        # Remove audio-related tags: [Dual-Audio], [ENG-ESP], etc.
+        title = re.sub(r'\s*\[Dual-Audio\]', '', title, flags=re.IGNORECASE)
+        title = re.sub(r'\s*\[ENG-ESP\]', '', title, flags=re.IGNORECASE)
+        
+        # Remove parenthetical notes at the end (like "(formerly Baratie 09)")
+        # Look for pattern: space + opening paren + content + closing paren at end
+        title = re.sub(r'\s+\([^)]*\)$', '', title)
+        
+        return title.strip()
+    
     def parse_arc_info(self, title: str, is_batch: bool = False) -> Optional[Dict]:
         """
         Parse arc information from torrent title to determine folder structure
@@ -31,13 +55,16 @@ class FolderStructureGenerator:
         Returns:
             Dict with arc_name, episode_number, quality info, or None if can't parse
         """
-        # Pattern for standard OnePace episodes: [One Pace][chapters] Arc Episode [quality][hash].ext
+        # Clean the title first - remove file extensions and parenthetical notes
+        cleaned_title = self.clean_title(title)
+        
+        # Pattern for standard OnePace episodes: [One Pace][chapters] Arc Episode [quality][hash]
         # Examples:
-        # [One Pace][1089-1090] Egghead 19 Extended [1080p][93B80191].mkv
+        # [One Pace][1089-1090] Egghead 19 Extended [1080p][93B80191]
         # [One Pace][903-908] Reverie [1080p]
         
         pattern = r'\[One Pace\]\[([^\]]+)\]\s*([^0-9\[]+?)\s*(\d+)?\s*(Extended)?\s*\[([^\]]+)\]'
-        match = re.search(pattern, title)
+        match = re.search(pattern, cleaned_title)
         
         if not match:
             return None
@@ -59,11 +86,8 @@ class FolderStructureGenerator:
         # For batch torrents, use the torrent name format as folder name
         # For single episodes, create a standardized folder name format
         if is_batch:
-            # Use the batch torrent name as the folder name (without file extension)
-            folder_name = self.sanitize_filename(title)
-            # Remove file extension if present
-            if folder_name.endswith('.mkv') or folder_name.endswith('.mp4'):
-                folder_name = folder_name.rsplit('.', 1)[0]
+            # Use the cleaned batch torrent name as the folder name
+            folder_name = self.sanitize_filename(cleaned_title)
         else:
             # Create standardized folder name: [One Pace][chapters] Arc [quality]
             folder_name = f"[One Pace][{chapters}] {arc_name} [{quality}]"
@@ -78,6 +102,57 @@ class FolderStructureGenerator:
             'quality': quality,
             'original_arc_name': arc_name
         }
+    
+    def merge_adjacent_ranges(self, chapter_parts: List[str]) -> List[str]:
+        """
+        Merge adjacent or overlapping chapter ranges
+        Examples: ['299-300', '301-302'] -> ['299-302']
+                 ['115-117', '117-119'] -> ['115-119']
+                 ['42', '22'] -> ['42', '22'] (preserve non-adjacent singles)
+        """
+        if not chapter_parts:
+            return []
+        
+        # Parse ranges into (start, end) tuples
+        parsed_ranges = []
+        for part in chapter_parts:
+            if '-' in part:
+                start, end = part.split('-', 1)
+                parsed_ranges.append((int(start.strip()), int(end.strip())))
+            else:
+                # Single chapter
+                num = int(part.strip())
+                parsed_ranges.append((num, num))
+        
+        # Sort by start position to properly detect adjacency and overlaps
+        parsed_ranges.sort(key=lambda x: x[0])
+        
+        merged = []
+        current_start, current_end = parsed_ranges[0]
+        
+        for i in range(1, len(parsed_ranges)):
+            next_start, next_end = parsed_ranges[i]
+            
+            # Check if ranges are adjacent or overlapping
+            if current_end + 1 >= next_start:
+                # Merge ranges - extend current range to include next range
+                current_end = max(current_end, next_end)
+            else:
+                # Gap too large, finalize current range
+                if current_start == current_end:
+                    merged.append(str(current_start))
+                else:
+                    merged.append(f"{current_start}-{current_end}")
+                
+                current_start, current_end = next_start, next_end
+        
+        # Add the final range
+        if current_start == current_end:
+            merged.append(str(current_start))
+        else:
+            merged.append(f"{current_start}-{current_end}")
+        
+        return merged
     
     def sanitize_filename(self, filename: str) -> str:
         """
@@ -255,111 +330,65 @@ class FolderStructureGenerator:
                 single_torrents = [t for t in arc_torrents if not t[0]['is_batch']]
                 
                 if batch_torrents:
-                    # Use batch torrent name as folder name
+                    # Use batch torrent name as folder name, but clean it first
                     batch_torrent, batch_info = batch_torrents[0]  # Use first batch torrent
-                    folder_name = self.sanitize_filename(batch_torrent['title'])
-                    # Remove file extension if present
-                    if folder_name.endswith('.mkv') or folder_name.endswith('.mp4'):
-                        folder_name = folder_name.rsplit('.', 1)[0]
+                    folder_name = self.clean_title(batch_torrent['title'])
+                    folder_name = self.sanitize_filename(folder_name)
                 else:
                     # Create combined chapter range for single episodes
                     if single_torrents:
-                        # Extract all chapter ranges and combine them
-                        all_chapters = []
+                        # Collect all chapter strings in the order they appear in the data
+                        # and intelligently combine them while preserving original ordering
+                        chapter_strings = []
                         quality = single_torrents[0][1]['quality']  # Use quality from first episode
                         
                         for torrent, info in single_torrents:
                             chapters = info['chapters']
-                            # Parse chapter range but preserve the original format for folder naming
-                            
-                            # Handle complex formats like "264-266, 268" (range + comma-separated)
-                            if ',' in chapters:
-                                # Split by comma first
-                                parts = chapters.split(',')
-                                for part in parts:
-                                    part = part.strip()
-                                    if '-' in part:
-                                        # This part is a range
-                                        start, end = part.split('-')
-                                        all_chapters.extend([int(start.strip()), int(end.strip())])
-                                    else:
-                                        # This part is a single chapter
-                                        all_chapters.append(int(part))
-                            elif '-' in chapters:
-                                # Simple range like "1089-1090"
-                                start, end = chapters.split('-')
-                                all_chapters.extend([int(start.strip()), int(end.strip())])
-                            else:
-                                # Single chapter
-                                all_chapters.append(int(chapters.strip()))
+                            if chapters not in chapter_strings:
+                                chapter_strings.append(chapters)
                         
-                        # For folder naming, we need to check if we have non-contiguous chapters
-                        # If any torrent has comma-separated chapters, preserve that format
-                        has_comma_separated = any(',' in info['chapters'] for torrent, info in single_torrents)
-                        
-                        if has_comma_separated:
-                            # Collect all unique chapters and sort them numerically
-                            all_chapter_nums = set()
-                            for torrent, info in single_torrents:
-                                chapters = info['chapters']
-                                # Parse all chapter numbers from this torrent
-                                if ',' in chapters:
-                                    parts = chapters.split(',')
-                                    for part in parts:
-                                        part = part.strip()
-                                        if '-' in part:
-                                            start, end = part.split('-')
-                                            all_chapter_nums.update(range(int(start.strip()), int(end.strip()) + 1))
-                                        else:
-                                            all_chapter_nums.add(int(part))
-                                elif '-' in chapters:
-                                    start, end = chapters.split('-')
-                                    all_chapter_nums.update(range(int(start.strip()), int(end.strip()) + 1))
-                                else:
-                                    all_chapter_nums.add(int(chapters.strip()))
-                            
-                            # Sort chapters numerically and create comma-separated string
-                            sorted_chapters = sorted(all_chapter_nums)
-                            
-                            # Group consecutive chapters into ranges, merge ranges with gaps of 5 or fewer chapters
-                            chapter_groups = []
-                            if sorted_chapters:
-                                current_start = sorted_chapters[0]
-                                current_end = sorted_chapters[0]
-                                
-                                for i in range(1, len(sorted_chapters)):
-                                    gap = sorted_chapters[i] - current_end - 1
-                                    if gap <= 5:  # Allow up to 5 chapters to be skipped
-                                        # Small gap or consecutive, extend current range
-                                        current_end = sorted_chapters[i]
-                                    else:
-                                        # Large gap, finish current range and start new one
-                                        if current_start == current_end:
-                                            chapter_groups.append(str(current_start))
-                                        else:
-                                            chapter_groups.append(f"{current_start}-{current_end}")
-                                        current_start = sorted_chapters[i]
-                                        current_end = sorted_chapters[i]
-                                
-                                # Add the last range
-                                if current_start == current_end:
-                                    chapter_groups.append(str(current_start))
-                                else:
-                                    chapter_groups.append(f"{current_start}-{current_end}")
-                            
-                            # Join with commas and spaces
-                            combined_chapters = ', '.join(chapter_groups)
-                            folder_name = f"[One Pace][{combined_chapters}] {arc_name} [{quality}]"
+                        # Parse and combine chapters while preserving order and merging adjacent ranges
+                        if len(chapter_strings) == 1:
+                            combined_chapters = chapter_strings[0]
                         else:
-                            # Find min and max chapters for contiguous ranges
-                            min_chapter = min(all_chapters)
-                            max_chapter = max(all_chapters)
+                            # Parse all chapter ranges and single chapters
+                            all_chapter_parts = []
                             
-                            # Create folder name with combined range
-                            if min_chapter == max_chapter:
-                                folder_name = f"[One Pace][{min_chapter}] {arc_name} [{quality}]"
+                            for chapter_str in chapter_strings:
+                                # Handle comma-separated chapters within a single string
+                                if ',' in chapter_str:
+                                    parts = [part.strip() for part in chapter_str.split(',')]
+                                    all_chapter_parts.extend(parts)
+                                else:
+                                    all_chapter_parts.append(chapter_str)
+                            
+                            # Remove duplicates while preserving order
+                            unique_parts = []
+                            for part in all_chapter_parts:
+                                if part not in unique_parts:
+                                    unique_parts.append(part)
+                            
+                            # Merge adjacent/overlapping ranges
+                            merged_parts = self.merge_adjacent_ranges(unique_parts)
+                            
+                            # Join all parts with commas
+                            combined_chapters = ', '.join(merged_parts)
+                        
+                        # Create folder name and check length
+                        folder_name = f"[One Pace][{combined_chapters}] {arc_name} [{quality}]"
+                        
+                        # If folder name is too long (Windows limit ~260 chars), truncate chapter list
+                        if len(folder_name) > 200:  # Leave some margin
+                            # Try with abbreviated chapter format
+                            first_part = merged_parts[0] if merged_parts else combined_chapters.split(',')[0]
+                            last_part = merged_parts[-1] if merged_parts else combined_chapters.split(',')[-1]
+                            
+                            if len(merged_parts) > 2:
+                                abbreviated_chapters = f"{first_part}, ... ({len(merged_parts)} ranges), {last_part}"
                             else:
-                                folder_name = f"[One Pace][{min_chapter}-{max_chapter}] {arc_name} [{quality}]"
+                                abbreviated_chapters = combined_chapters
+                            
+                            folder_name = f"[One Pace][{abbreviated_chapters}] {arc_name} [{quality}]"
                         
                         folder_name = self.sanitize_filename(folder_name)
                     else:
@@ -431,7 +460,7 @@ def main():
     import sys
     
     # Default settings
-    input_file = "generated/torrentsClean.json"
+    input_file = "generated/torrentsCleanAll.json"
     output_base = "OnePace_Structure"
     
     # Simple argument parsing

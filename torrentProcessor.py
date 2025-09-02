@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Dict, List, Set, Tuple, Optional
 
 class TorrentProcessor:
-    def __init__(self, input_file: str = "generated/torrentsRaw.json", output_file: str = "generated/torrents.json", min_seeders: int = 5):
+    def __init__(self, input_file: str = "generated/torrentsRawAll.json", output_file: str = "generated/torrentsCleanAll.json", min_seeders: int = 5):
         """
         Initialize the TorrentProcessor
         
@@ -21,6 +21,7 @@ class TorrentProcessor:
         self.stats = {
             'total_input': 0,
             'removed_low_seeders': 0,
+            'removed_unwanted': 0,
             'removed_duplicates': 0,
             'batch_single_conflicts': 0,
             'final_count': 0
@@ -138,7 +139,7 @@ class TorrentProcessor:
     def handle_batch_vs_single(self, torrents: List[Dict]) -> List[Dict]:
         """
         Handle conflicts between batch releases and individual episodes
-        Keep both batch and newer individual episodes
+        Priority: Better quality > Newer date > Keep batch over individual episodes
         """
         result = []
         batch_torrents = []
@@ -151,51 +152,89 @@ class TorrentProcessor:
             else:
                 single_torrents.append(torrent)
         
-        # Add all batch torrents
-        result.extend(batch_torrents)
-        
-        # For single episodes, check if there's a newer version than what's in batches
+        # Group single episodes by arc for comparison with batches
+        single_by_arc = {}
         for single in single_torrents:
             single_info = self.parse_episode_info(single['title'])
-            if not single_info:
-                result.append(single)
+            if single_info:
+                arc_name = single_info['arc_name']
+                if arc_name not in single_by_arc:
+                    single_by_arc[arc_name] = []
+                single_by_arc[arc_name].append(single)
+        
+        # Process each batch and decide whether to keep it or replace with individual episodes
+        batches_to_keep = []
+        singles_to_add = []
+        
+        for batch in batch_torrents:
+            batch_info = self.parse_episode_info(batch['title'])
+            if not batch_info:
+                batches_to_keep.append(batch)
                 continue
             
-            # Check if this single episode conflicts with any batch
-            conflicts_with_batch = False
-            single_date = self.parse_upload_date(single['upload_date'])
+            arc_name = batch_info['arc_name']
+            batch_quality = self.get_quality_score(batch_info['quality'])
+            batch_date = self.parse_upload_date(batch['upload_date'])
             
-            for batch in batch_torrents:
-                batch_info = self.parse_episode_info(batch['title'])
-                if batch_info and batch_info['arc_name'] == single_info['arc_name']:
-                    batch_date = self.parse_upload_date(batch['upload_date'])
-                    
-                    # If single episode is newer than batch, keep both
-                    # If batch is newer, skip the single episode
-                    if single_date <= batch_date:
-                        conflicts_with_batch = True
-                        break
-            
-            if not conflicts_with_batch:
-                result.append(single)
-            else:
-                # Check if single episode has better quality than batch
-                single_quality = self.get_quality_score(single_info['quality'])
-                should_keep = False
+            # Check if there are individual episodes for this arc
+            if arc_name in single_by_arc:
+                conflicting_singles = single_by_arc[arc_name]
                 
-                for batch in batch_torrents:
-                    batch_info = self.parse_episode_info(batch['title'])
-                    if batch_info and batch_info['arc_name'] == single_info['arc_name']:
-                        batch_quality = self.get_quality_score(batch_info['quality'])
-                        if single_quality > batch_quality:
-                            should_keep = True
-                            break
+                # Find the best quality among individual episodes for this arc
+                best_single_quality = 0
+                newest_single_date = datetime(1970, 1, 1)
                 
-                if should_keep:
-                    result.append(single)
+                for single in conflicting_singles:
+                    single_info = self.parse_episode_info(single['title'])
+                    if single_info:
+                        single_quality = self.get_quality_score(single_info['quality'])
+                        single_date = self.parse_upload_date(single['upload_date'])
+                        
+                        best_single_quality = max(best_single_quality, single_quality)
+                        newest_single_date = max(newest_single_date, single_date)
+                
+                # Decision logic:
+                # 1. If individual episodes have better quality, use them instead of batch
+                # 2. If same quality, prefer newer upload date
+                # 3. If same quality and date, prefer batch (more convenient)
+                
+                if best_single_quality > batch_quality:
+                    # Individual episodes have better quality - use them instead
+                    singles_to_add.extend(conflicting_singles)
                     self.stats['batch_single_conflicts'] += 1
+                    print(f"  Replacing {arc_name} batch ({batch_info['quality']}) with individual episodes ({self.get_quality_name(best_single_quality)})")
+                elif best_single_quality == batch_quality and newest_single_date > batch_date:
+                    # Same quality but individual episodes are newer
+                    singles_to_add.extend(conflicting_singles)
+                    self.stats['batch_single_conflicts'] += 1
+                    print(f"  Replacing {arc_name} batch with newer individual episodes (same quality: {batch_info['quality']})")
+                else:
+                    # Keep batch (same/better quality and date, or batch is newer)
+                    batches_to_keep.append(batch)
+                    print(f"  Keeping {arc_name} batch ({batch_info['quality']}) over individual episodes")
+                
+                # Remove this arc from singles dict so we don't process it again
+                del single_by_arc[arc_name]
+            else:
+                # No conflicting individual episodes, keep the batch
+                batches_to_keep.append(batch)
+        
+        # Add remaining individual episodes that don't conflict with any batch
+        for arc_name, episodes in single_by_arc.items():
+            singles_to_add.extend(episodes)
+        
+        # Combine results
+        result.extend(batches_to_keep)
+        result.extend(singles_to_add)
         
         return result
+    
+    def get_quality_name(self, quality_score: int) -> str:
+        """
+        Convert quality score back to quality name for logging
+        """
+        quality_map = {1: '480p', 2: '720p', 3: '1080p', 4: '1440p', 5: '4K'}
+        return quality_map.get(quality_score, 'unknown')
     
     def remove_duplicates(self, torrents: List[Dict]) -> List[Dict]:
         """
@@ -236,6 +275,31 @@ class TorrentProcessor:
         
         return result
     
+    def is_unwanted_release(self, title: str) -> bool:
+        """
+        Check if torrent title contains unwanted keywords
+        """
+        unwanted_keywords = ['unofficial', 'alternate', 'april fools', 'plex', 'v2']
+        title_lower = title.lower()
+        
+        for keyword in unwanted_keywords:
+            if keyword in title_lower:
+                return True
+        return False
+    
+    def filter_unwanted_releases(self, torrents: List[Dict]) -> List[Dict]:
+        """
+        Remove torrents with unwanted keywords (unofficial, alternate, april fools, plex)
+        """
+        result = []
+        for torrent in torrents:
+            if not self.is_unwanted_release(torrent['title']):
+                result.append(torrent)
+            else:
+                self.stats['removed_unwanted'] += 1
+        
+        return result
+    
     def filter_low_seeders(self, torrents: List[Dict]) -> List[Dict]:
         """
         Remove torrents with low seeder counts
@@ -270,18 +334,23 @@ class TorrentProcessor:
             
             print(f"Processing {len(torrents)} torrents...")
             
-            # Step 1: Filter out torrents with low seeders
-            print(f"Step 1: Filtering torrents with less than {self.min_seeders} seeders...")
+            # Step 1: Filter out unwanted releases (unofficial, alternate, etc.)
+            print("Step 1: Filtering unwanted releases (unofficial, alternate, april fools, plex, v2)...")
+            torrents = self.filter_unwanted_releases(torrents)
+            print(f"Remaining after unwanted filter: {len(torrents)}")
+            
+            # Step 2: Filter out torrents with low seeders
+            print(f"Step 2: Filtering torrents with less than {self.min_seeders} seeders...")
             torrents = self.filter_low_seeders(torrents)
             print(f"Remaining after seeder filter: {len(torrents)}")
             
-            # Step 2: Remove duplicates
-            print("Step 2: Removing duplicate episodes...")
+            # Step 3: Remove duplicates
+            print("Step 3: Removing duplicate episodes...")
             torrents = self.remove_duplicates(torrents)
             print(f"Remaining after duplicate removal: {len(torrents)}")
             
-            # Step 3: Handle batch vs single episode conflicts
-            print("Step 3: Handling batch vs single episode conflicts...")
+            # Step 4: Handle batch vs single episode conflicts
+            print("Step 4: Handling batch vs single episode conflicts...")
             torrents = self.handle_batch_vs_single(torrents)
             print(f"Final count: {len(torrents)}")
             
@@ -321,6 +390,7 @@ class TorrentProcessor:
         """
         print(f"\n=== Torrent Processing Statistics ===")
         print(f"Total input torrents: {self.stats['total_input']}")
+        print(f"Removed (unwanted releases): {self.stats['removed_unwanted']}")
         print(f"Removed (low seeders < {self.min_seeders}): {self.stats['removed_low_seeders']}")
         print(f"Removed (duplicates): {self.stats['removed_duplicates']}")
         print(f"Batch/single conflicts resolved: {self.stats['batch_single_conflicts']}")
@@ -335,8 +405,8 @@ def main():
     import sys
     
     # Default settings
-    input_file = "generated/torrentsRaw.json"
-    output_file = "generated/torrentsClean.json"
+    input_file = "generated/torrentsRawAll.json"
+    output_file = "generated/torrentsCleanAll.json"
     min_seeders = 5
     
     # Simple argument parsing

@@ -9,16 +9,16 @@ import os
 
 class NyaaScraper:
     def __init__(self):
-        self.base_url = "https://nyaa.si/user/Galaxy9000"
+        self.base_url = "https://nyaa.si/?f=0&c=0_0&q=one+pace"
         self.session = requests.Session()
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         })
     
     def get_page_count(self):
-        """Get the total number of pages for the user"""
+        """Get the total number of pages for the query"""
         try:
-            response = self.session.get(f"{self.base_url}?p=1")
+            response = self.session.get(f"{self.base_url}&p=1")
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
             
@@ -66,22 +66,47 @@ class NyaaScraper:
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            # Find file list table
+            # Find file list - nyaa.si uses a <ul> with data-show="yes"
             file_list = []
-            file_table = soup.find('table', class_='torrent-file-list')
-            if file_table:
-                rows = file_table.find('tbody').find_all('tr') if file_table.find('tbody') else []
-                for row in rows:
-                    cells = row.find_all('td')
-                    if len(cells) >= 2:
-                        file_path = cells[0].text.strip()
-                        file_size = cells[1].text.strip()
-                        file_list.append({
-                            'path': file_path,
-                            'size': file_size
-                        })
+            
+            # Look for the file list ul element
+            file_ul = soup.find('ul', {'data-show': 'yes'})
+            
+            if file_ul:
+                # Find all li elements containing files
+                file_items = file_ul.find_all('li')
+                print(f"Found {len(file_items)} file items in list")
+                
+                for item in file_items:
+                    # Extract filename (text content excluding the size span)
+                    size_span = item.find('span', class_='file-size')
+                    if size_span:
+                        # Get the text before the size span
+                        file_path = item.get_text()
+                        # Remove the size text from the end
+                        size_text = size_span.get_text().strip()
+                        file_path = file_path.replace(size_text, '').strip()
+                        
+                        # Remove the icon class text if present
+                        if file_path.startswith('file'):
+                            # Remove leading file icon text
+                            file_path = re.sub(r'^[^\[]*\[', '[', file_path)
+                        
+                        # Clean up the size text (remove parentheses)
+                        size_text = size_text.replace('(', '').replace(')', '').strip()
+                        
+                        if file_path and size_text:
+                            file_list.append({
+                                'path': file_path,
+                                'size': size_text
+                            })
+                
+                print(f"Extracted {len(file_list)} files from file list")
+            else:
+                print("No file list ul element found on torrent page")
             
             return file_list
+            
         except Exception as e:
             print(f"Error extracting file list from {torrent_url}: {e}")
             return []
@@ -90,15 +115,30 @@ class NyaaScraper:
         """Determine if a torrent is a batch based on title analysis"""
         title_lower = title.lower()
         
-        # Simple and reliable check: single files have extensions, batches don't
         # Common video file extensions
         video_extensions = ['.mkv', '.mp4', '.avi', '.mov', '.wmv', '.flv', '.webm']
         
-        # If title ends with a video file extension, it's a single file
+        # If title ends with a video file extension, it's definitely a single file
         if any(title_lower.endswith(ext) for ext in video_extensions):
             return False
         
-        # If no file extension, it's a batch/folder
+        # Parse OnePace format to check for episode numbers
+        # Pattern: [One Pace][chapters] Arc Episode [quality]
+        onepace_pattern = r'\[One Pace\]\[([^\]]+)\]\s*([^0-9\[]+?)\s*(\d+)?\s*(Extended)?\s*\[([^\]]+)\]'
+        match = re.search(onepace_pattern, title)
+        
+        if match:
+            episode_num = match.group(3)  # Episode number
+            
+            # If there's an episode number, it's likely a single episode
+            if episode_num:
+                return False
+            
+            # If no episode number, it's likely a batch
+            return True
+        
+        # Fallback: if we can't parse the OnePace format, assume it's a batch
+        # This handles edge cases and non-standard formats
         return True
     
     def parse_size(self, size_text):
@@ -125,12 +165,14 @@ class NyaaScraper:
     
     def scrape_page(self, page_num):
         """Scrape torrents from a specific page"""
-        url = f"{self.base_url}?p={page_num}"
+        url = f"{self.base_url}&p={page_num}"
+        print(f"Requesting: {url}")
         torrents = []
         
         try:
             response = self.session.get(url)
             response.raise_for_status()
+            print(f"Response status: {response.status_code}")
             soup = BeautifulSoup(response.content, 'html.parser')
             
             # Find torrent table
@@ -208,7 +250,13 @@ class NyaaScraper:
                     file_list = []
                     if is_batch:
                         print(f"Detected batch torrent, extracting file list...")
-                        file_list = self.extract_file_list(torrent_page_url)
+                        try:
+                            file_list = self.extract_file_list(torrent_page_url)
+                            if file_list:
+                                time.sleep(0.5)  # Brief delay after successful file list extraction
+                        except Exception as e:
+                            print(f"Warning: Failed to extract file list for '{title}': {e}")
+                            # Continue processing without file list
                     
                     # Parse size
                     size_text = size_cell.text.strip()
@@ -254,11 +302,7 @@ class NyaaScraper:
                     processed_count += 1
                     print(f"Found: {title}")
                     
-                    # Small delay only for batch torrents (file list extraction)
-                    if is_batch:
-                        time.sleep(0.3)
-                    else:
-                        time.sleep(0.05)
+                    # Sleep was moved inside file list extraction above
                     
                 except Exception as e:
                     print(f"SKIPPED (processing error): Error processing row - {e}")
@@ -297,12 +341,12 @@ class NyaaScraper:
             all_torrents.extend(page_torrents)
             print(f"Found {len(page_torrents)} OnePace torrents on page {page}")
             
-            # Short delay between pages
-            time.sleep(0.2)
+            # Longer delay between pages to avoid rate limiting
+            time.sleep(1.0)
         
         return all_torrents
     
-    def save_to_json(self, torrents, filename="torrentsRaw.json"):
+    def save_to_json(self, torrents, filename="torrentsRawAll.json"):
         """Save torrent data to JSON file with metadata"""
         # Create generated directory if it doesn't exist
         generated_dir = "generated"
@@ -317,7 +361,6 @@ class NyaaScraper:
             'metadata': {
                 'generated_at': datetime.now().isoformat(),
                 'source_url': self.base_url,
-                'uploader': 'Galaxy9000',
                 'total_torrents_found': len(torrents),
                 'version': '1.0',
             },
@@ -333,7 +376,7 @@ class NyaaScraper:
 def main():
     scraper = NyaaScraper()
     
-    print("Starting OnePace torrent scraper for Galaxy9000...")
+    print("Starting OnePace torrent scraper...")
     print("This may take a while depending on the number of pages...")
     
     try:
